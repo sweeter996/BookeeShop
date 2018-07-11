@@ -27,12 +27,12 @@ namespace BookeeShop.Models
 
         [EmailAddress]
         [Required(ErrorMessage = "Emmail is not empty")]
-        public string Emmail { get; set; }
+        public string Email { get; set; }
 
         //[Required(ErrorMessage = "Emmail is not empty")]
         //public string Password { get; set; }
         public Boolean isActive { get; set; }
         public DateTime CreatedDate { get; set; }
-        public DateTime LastDateModified { get; set; }
+        public DateTime? LastDateModified { get; set; }
     }
 }
