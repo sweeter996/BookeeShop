@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace BookeeShop.Areas.Admin.Models
 {
-    public class castCustomerModel
+    public class cast_RegisterCustomerModel
     {
         [Required(ErrorMessage = "LastName is not empty")]
         [MaxLength(30)]
@@ -21,7 +21,7 @@ namespace BookeeShop.Areas.Admin.Models
 
         [EmailAddress]
         [Required(ErrorMessage = "Emmail is not empty")]
-        public string Emmail { get; set; }
+        public string Email { get; set; }
 
         [Required(ErrorMessage = "Emmail is not empty")]
         [DataType(DataType.Password)]
