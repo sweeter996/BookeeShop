@@ -14,15 +14,15 @@ namespace BookeeShop.Areas.Admin.Controllers
     {
         // GET: Admin/Register
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Register()
         {
             ViewBag.resultMessage = null;
             return View();
         }
         [HttpPost]
-        public ActionResult Index(castCustomerModel user)
+        public ActionResult Register(cast_RegisterCustomerModel user)
         {
-            if(CustomerDAO.isNullCutomer(user.Email))
+            if(CustomerDAO.IsNullCutomer(user.Email))
             {
                 using (var db = new BookeeDb())
                 {

@@ -10,8 +10,8 @@ namespace BookeeShop.Models
     [Table("Customer")]
     public class CustomerModel
     {
-        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public int CustomerID { get; set; }
 
         //[Required(ErrorMessage = "LastName is not empty")]

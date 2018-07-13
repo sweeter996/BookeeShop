@@ -10,9 +10,9 @@ using System.Web;
 
 namespace BookeeShop.Areas.Admin.Data_Access
 {
-    public class CustomerDAO
+    public static class CustomerDAO
     {
-        public static Boolean isNullCutomer(string email)
+        public static Boolean IsNullCutomer(string email)
         {
             CustomerModel existUser = new BookeeDb().Customers.FirstOrDefault(search => search.Email == email);
             return existUser == null ? true : false;
@@ -33,12 +33,12 @@ namespace BookeeShop.Areas.Admin.Data_Access
             }
             return outputPassword.ToString();
         }
-        public static Boolean InsertOnMock(castCustomerModel user)
+        public static Boolean InsertOnMock(cast_RegisterCustomerModel user)
         {
             const string URL = "http://5b423711e6d38000147feee8.mockapi.io/";
             HttpClient http = new HttpClient();
             http.BaseAddress = new Uri(URL);
-            var postTask = http.PostAsJsonAsync<castCustomerModel>("Customers", user);
+            var postTask = http.PostAsJsonAsync<cast_RegisterCustomerModel>("Customers", user);
             postTask.Wait();
             var result = postTask.Result;
             //if success return true else false
@@ -51,6 +51,23 @@ namespace BookeeShop.Areas.Admin.Data_Access
                 return false;
             }
             //ModelState.AddModelError(string.Empty, "Server Error. Please contact administrator.");
+        }
+
+        public static cast_RegisterCustomerModel GetUserOnMock(int userId)
+        {
+            cast_RegisterCustomerModel user = new cast_RegisterCustomerModel(); ;
+            using (var http = new HttpClient())
+            {
+                http.BaseAddress = new Uri("http://5b423711e6d38000147feee8.mockapi.io/");
+                HttpResponseMessage response = http.GetAsync("/Customers/" + userId).Result;
+                if (response.IsSuccessStatusCode)
+                {
+                    var readContent = response.Content.ReadAsAsync<cast_RegisterCustomerModel>();
+                    readContent.Wait();
+                    user = readContent.Result;
+                }
+                return user;
+            }
         }
     }
 }
