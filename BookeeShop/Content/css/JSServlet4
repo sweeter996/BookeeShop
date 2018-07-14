@@ -1,0 +1,258 @@
+var customConfig = customConfig || {pages: {}, templates: {}, allowOverride: ["trackReferrer", "trackLocation"]};
+customConfig.pages.ITEMPAGE = {
+	match: [
+		{
+			type: "selector",
+			selector: ".box-recommendation-related-product"
+		}
+	],
+	register: [
+		{
+			type: "url-regexp",
+			pattern: "(.*)",
+			registerGroup: {
+				1: "itemmeta.itemUrl"
+			}
+		}
+	],
+	//Hint: You only have to implement the post render function here (You can use $ - jQuery and the _gravity object)
+	postRenderFunction: function ($) {
+		var intervallCounter=0;
+		var intervall = setInterval(function () {
+			intervallCounter++;
+			if (intervallCounter > 60) {
+				clearTimeout(intervall);
+			}
+			var divs = document.getElementsByClassName("abc-testing-product-item");
+			if (divs.length > 0) {
+				var rel = divs[0].getAttribute("rel");
+                var rel2 = divs[divs.length-1].getAttribute("rel");
+
+				if ((rel !== null && rel != undefined && rel != "" && rel2 !== null && rel2 != undefined && rel2 != "") || intervallCounter>10) {
+
+
+					clearTimeout(intervall);
+
+					var send_test = {
+						type: 'event',
+						eventType: 'TEST_FILL'
+					};
+					if (rel !== null && rel != undefined) {
+						send_test.rel = rel;
+					}
+					else {
+						send_test.rel = "null_value";
+					}
+					var scenarioName = divs[0].getAttribute("typeblock");
+					if (scenarioName !== null && scenarioName != undefined) {
+						send_test.scenarioName = scenarioName;
+					}
+					else {
+						send_test.scenarioName = "null_value";
+					}
+					_gravity.push(send_test);
+
+					for (var i = 1; i < divs.length; i++) {
+						var nextScenarioName = divs[i].getAttribute("typeblock");
+						var nextRel = divs[i].getAttribute("rel");
+						if (scenarioName != nextScenarioName) {
+							var send_test2 = {
+								type: 'event',
+								eventType: 'TEST_FILL'
+							};
+							if (nextRel !== null && nextRel != undefined && nextRel != "") {
+								send_test2.rel = nextRel;
+							} else {
+								send_test2.rel = "null_value";
+							}
+							if (nextScenarioName !== null && nextScenarioName != undefined) {
+								send_test2.scenarioName = nextScenarioName;
+							}
+							else {
+								send_test2.scenarioName = "null_value";
+							}
+							_gravity.push(send_test2);
+							break;
+						}
+					}
+				}
+			}
+		}, 1000);
+
+	}}
+customConfig.pages.FOOTER = {
+	match: [
+		{
+			type: "selector",
+			selector: ".box-related-product-footer"
+		}
+	],
+	register: [
+		{
+			type: "url-regexp",
+			pattern: "(.*)",
+			registerGroup: {
+				1: "itemmeta.itemUrl"
+			}
+		}
+	],
+	//Hint: You only have to implement the post render function here (You can use $ - jQuery and the _gravity object)
+	postRenderFunction: function ($) {
+		var intervallCounter=0;
+		var intervall = setInterval(function () {
+			intervallCounter++;
+			if (intervallCounter > 60) {
+				clearTimeout(intervall);
+			}
+			var divs = document.getElementsByClassName("abc-testing-product-item");
+			if (divs.length > 0) {
+				var rel = divs[0].getAttribute("rel");
+                var rel2 = divs[divs.length-1].getAttribute("rel");
+
+				if ((rel !== null && rel != undefined && rel != "" && rel2 !== null && rel2 != undefined && rel2 != "") || intervallCounter>10) {
+
+
+					clearTimeout(intervall);
+
+					var send_test = {
+						type: 'event',
+						eventType: 'TEST_FILL'
+					};
+					if (rel !== null && rel != undefined) {
+						send_test.rel = rel;
+					}
+					else {
+						send_test.rel = "null_value";
+					}
+					var scenarioName = divs[0].getAttribute("typeblock");
+					if (scenarioName !== null && scenarioName != undefined) {
+						send_test.scenarioName = scenarioName;
+					}
+					else {
+						send_test.scenarioName = "null_value";
+					}
+					_gravity.push(send_test);
+
+					for (var i = 1; i < divs.length; i++) {
+						var nextScenarioName = divs[i].getAttribute("typeblock");
+						var nextRel = divs[i].getAttribute("rel");
+						if (scenarioName != nextScenarioName) {
+							var send_test2 = {
+								type: 'event',
+								eventType: 'TEST_FILL'
+							};
+							if (nextRel !== null && nextRel != undefined && nextRel != "") {
+								send_test2.rel = nextRel;
+							} else {
+								send_test2.rel = "null_value";
+							}
+							if (nextScenarioName !== null && nextScenarioName != undefined) {
+								send_test2.scenarioName = nextScenarioName;
+							}
+							else {
+								send_test2.scenarioName = "null_value";
+							}
+							_gravity.push(send_test2);
+							break;
+						}
+					}
+				}
+			}
+		}, 1000);
+
+	}}
+customConfig.pages.CARTPAGE = {
+	match: [
+		{
+			type: "url-regexp",
+			pattern: "http://tiki.vn/checkout/cart"
+		}
+	],
+	register: [
+		{
+			type: "url-regexp",
+			pattern: "(.*)",
+			registerGroup: {
+				1: "itemmeta.itemUrl"
+			}
+		}
+	],
+//Hint: You only have to implement the post render function here (You can use $ - jQuery and the _gravity object)
+postRenderFunction: function ($) {
+	var intervallCounter=0;
+	var intervall = setInterval(function () {
+		intervallCounter++;
+		if (intervallCounter > 60) {
+			clearTimeout(intervall);
+		}
+		var divs = document.getElementsByClassName("abc-testing-product-item");
+		if (divs.length > 0) {
+			clearTimeout(intervall);
+			var rel = divs[0].getAttribute("rel");
+			var send_test = {
+				type: 'event',
+				eventType: 'TEST_FILL'
+			};
+			if (rel !== null && rel != undefined) {
+				send_test.rel = rel;
+			}
+			else{
+				send_test.rel="null_value";
+			}
+			var scenarioName=divs[0].getAttribute("typeblock");
+			if (scenarioName !== null && scenarioName != undefined) {
+				send_test.scenarioName = scenarioName;
+			}
+			else{
+				send_test.scenarioName="null_value";
+			}
+			_gravity.push(send_test);
+			
+			for (var i=1; i<divs.length; i++)
+			{
+				var nextScenarioName=divs[i].getAttribute("typeblock");
+				var nextRel=divs[i].getAttribute("rel");
+				if(scenarioName!=nextScenarioName){
+					var send_test2 = {
+						type: 'event',
+						eventType: 'TEST_FILL'
+					};
+					if (nextRel !== null && nextRel!= undefined){
+						send_test2.rel=nextRel;
+					}else{
+						send_test2.rel="null_value";
+					}
+					if (nextScenarioName !== null && nextScenarioName != undefined) {
+						send_test2.scenarioName = nextScenarioName;
+					}
+					else{
+						send_test2.scenarioName="null_value";
+					}
+					_gravity.push(send_test2);
+					break;
+				}
+			}
+		}
+	}, 1000);
+	
+}}
+customConfig.pages.MAIN = {
+	match: [
+	],
+}
+customConfig.pages.GENERATED_FALLBACK = {
+	match: [
+		{
+			type: 'url-regexp',
+			selector: '*'
+		}
+	],
+	postRenderFunction: function($) {
+		_gravity.push({
+			type: 'event',
+			eventType: 'BROWSE'
+		});
+	}
+}
+
+_gravity.push({type: "customconfig", config: customConfig, environment: "prod"});
