@@ -161,9 +161,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Api\apiRegisterController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\RegisterController.cs" />
-    <Compile Include="Areas\Admin\Models\castCustomerModel.cs" />
+    <Compile Include="Areas\Admin\Data Access\CustomerDAO.cs" />
+    <Compile Include="Areas\Admin\Models\cast_LoginCustomerModel.cs" />
+    <Compile Include="Areas\Admin\Models\cast_RegisterCustomerModel.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="Controllers\BookeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -256,6 +258,8 @@
     </Content>
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\User\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Register\Register.cshtml" />
+    <Content Include="Areas\Admin\Views\Login\Login.cshtml" />
     <Content Include="Areas\Admin\Views\Register\Index.cshtml" />
     <Content Include="Content\scss\style.scss" />
     <Content Include="Content\css\1541902979357787" />
@@ -322,6 +326,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Api\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Models\" />
