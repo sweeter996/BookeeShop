@@ -83,5 +83,15 @@ namespace BookeeShop.Controllers
             ModelState.Clear();
             return View();
         }
+
+        public ActionResult DetailBook()
+        {
+            return View();
+        }
+
+        public ActionResult CategoryBook()
+        {
+            return View();
+        }
     }
 }
