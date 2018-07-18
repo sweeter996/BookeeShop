@@ -32,5 +32,15 @@ namespace BookeeShop.Controllers
         {
             return View();
         }
+
+        public ActionResult DetailBook()
+        {
+            return View();
+        }
+
+        public ActionResult CategoryBook()
+        {
+            return View();
+        }
     }
 }
