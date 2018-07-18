@@ -8,11 +8,11 @@ namespace BookeeShop.Areas.Admin.Models
 {
     public class cast_RegisterCustomerModel
     {
-        [Required(ErrorMessage = "LastName is not empty")]
+        [Required(ErrorMessage = "Chưa nhập họ")]
         [MaxLength(30)]
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "FirstName is not empty")]
+        [Required(ErrorMessage = "Chưa nhập tên")]
         [MaxLength(30)]
         public string FirstName { get; set; }
 
@@ -20,10 +20,10 @@ namespace BookeeShop.Areas.Admin.Models
         public string Address { get; set; }
 
         [EmailAddress]
-        [Required(ErrorMessage = "Emmail is not empty")]
+        [Required(ErrorMessage = "Chưa nhập email")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Emmail is not empty")]
+        [Required(ErrorMessage = "Chưa nhập password")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
     }
