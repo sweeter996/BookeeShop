@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3EF2A4BD-1CF0-41DF-9077-7B46E3B03C05}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BookeeShop</RootNamespace>
+    <AssemblyName>BookeeShop</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\RegisterController.cs" />
+    <Compile Include="Areas\Admin\Data Access\CustomerDAO.cs" />
+    <Compile Include="Areas\Admin\Models\cast_LoginCustomerModel.cs" />
+    <Compile Include="Areas\Admin\Models\cast_RegisterCustomerModel.cs" />
+    <Compile Include="Areas\User\UserAreaRegistration.cs" />
+    <Compile Include="Controllers\BookeeController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\BookCategoriesModel.cs" />
+    <Compile Include="Models\BookeeDb.cs" />
+    <Compile Include="Models\BookInformationModel.cs" />
+    <Compile Include="Models\castBookModel.cs" />
+    <Compile Include="Models\Class1.cs" />
+    <Compile Include="Models\CustomerModel.cs" />
+    <Compile Include="Models\OrdersModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\chitietcss\0FwgLGi25wG.png" />
+    <Content Include="Content\chitietcss\137072_chuc-mot-ngay-tot-lanh-bia-mem.jpg" />
+    <Content Include="Content\chitietcss\137825_con-lu-van-chua-qua.jpg" />
+    <Content Include="Content\chitietcss\139252_buoi-chieu-windows-tai-ban-032014.jpg" />
+    <Content Include="Content\chitietcss\140457_ngoi-truong-moi-khi-tai-ban-062014.jpg" />
+    <Content Include="Content\chitietcss\140457_p57560mbiatruoc.jpg" />
+    <Content Include="Content\chitietcss\144411_nguoi-con-ben-mot-dong-song.jpg" />
+    <Content Include="Content\chitietcss\155615_sos.jpg" />
+    <Content Include="Content\chitietcss\156826_van-hoc-tuoi-20-charao-mua-trang.jpg" />
+    <Content Include="Content\chitietcss\156902_van-hoc-tuoi-20-nhiet-doi-buon.jpg" />
+    <Content Include="Content\chitietcss\16299486_1160129687445912_2112726049279090142_n.jpg" />
+    <Content Include="Content\chitietcss\1689415_10152245006574254_1694203289_n.png" />
+    <Content Include="Content\chitietcss\176833_lang-rung-ca-mau.jpg" />
+    <Content Include="Content\chitietcss\199478_co-quen-sau.jpg" />
+    <Content Include="Content\chitietcss\1e2RywyANNe.html" />
+    <Content Include="Content\chitietcss\212501_thien-long-bat-bo-bo-3-tap.jpg" />
+    <Content Include="Content\chitietcss\247635_chuyen-xu-lang-biang-tap-3-tang-kem-so-than-chu.jpg" />
+    <Content Include="Content\chitietcss\247635_p73713m3.jpg" />
+    <Content Include="Content\chitietcss\252777_nhung-con-ca-mac-can.jpg" />
+    <Content Include="Content\chitietcss\26168446_902961146533379_2519617882919434467_n.jpg" />
+    <Content Include="Content\chitietcss\263948_bao-gio-cho-den-ngay-xua.jpg" />
+    <Content Include="Content\chitietcss\281110_cay-chuoi-non-di-giay-xanh-bia-cung-qua-tang-postcard-lich-2018-de-ban-13-to-so.jpg" />
+    <Content Include="Content\chitietcss\285590_con-nhung-bong-mua-tan.jpg" />
+    <Content Include="Content\chitietcss\294135_anh-khong-la-con-cho-cua-em.jpg" />
+    <Content Include="Content\chitietcss\298726_vua-nham-mat-vua-mo-cua-so-tai-ban-2018.jpg" />
+    <Content Include="Content\chitietcss\301648_bon-chang-trai-cung-nhau-di-du-lich.jpg" />
+    <Content Include="Content\chitietcss\305050_co-phai-anh-la-tinh-yeu-cua-em.jpg" />
+    <Content Include="Content\chitietcss\306905_desktopjma1-ti%281%29.jpg" />
+    <Content Include="Content\chitietcss\306905_desktopjma1-ti.jpg" />
+    <Content Include="Content\chitietcss\30704115_1424927110947395_7304740107699879936_n%281%29.jpg" />
+    <Content Include="Content\chitietcss\30704115_1424927110947395_7304740107699879936_n.jpg" />
+    <Content Include="Content\chitietcss\308107_phai-dep-elle-so-93-thang-72018.jpg" />
+    <Content Include="Content\chitietcss\308660_desktop%281%29.jpg" />
+    <Content Include="Content\chitietcss\308660_desktop.jpg" />
+    <Content Include="Content\chitietcss\308991_mua-ngau-thang-bay.jpg" />
+    <Content Include="Content\chitietcss\309001_con-giong-chieu-mua-ha.jpg" />
+    <Content Include="Content\chitietcss\309167_desktop%281%29.jpg" />
+    <Content Include="Content\chitietcss\309167_desktop.jpg" />
+    <Content Include="Content\chitietcss\309606_914249e16b7f69ec230732e9ef6ed7e1a57d02a0ab1e7200c3pimgpshfullsizedistr%281%29.jpg" />
+    <Content Include="Content\chitietcss\309606_914249e16b7f69ec230732e9ef6ed7e1a57d02a0ab1e7200c3pimgpshfullsizedistr.jpg" />
+    <Content Include="Content\chitietcss\309923_desktop5vnk-a2%281%29.jpg" />
+    <Content Include="Content\chitietcss\309923_desktop5vnk-a2.jpg" />
+    <Content Include="Content\chitietcss\310398_desktop%281%29.jpg" />
+    <Content Include="Content\chitietcss\310398_desktop.jpg" />
+    <Content Include="Content\chitietcss\31252864_778991768977105_448573836162498560_n.jpg" />
+    <Content Include="Content\chitietcss\34756424_2092625674352597_6346415002815037440_n.jpg" />
+    <Content Include="Content\chitietcss\35890_toi-thay-hoa-vang-tren-co-xanh-bia-mem.jpg" />
+    <Content Include="Content\chitietcss\36520836_10156436150229254_3943340269096665088_n.png" />
+    <Content Include="Content\chitietcss\36771290_1127899917350504_1211367243477155840_n.jpg" />
+    <Content Include="Content\chitietcss\36852318_2067891253537896_407510452709359616_n.jpg" />
+    <Content Include="Content\chitietcss\36853369_1021041908078157_1017996240874373120_n.jpg" />
+    <Content Include="Content\chitietcss\37195247_1004541026382230_2619673426264064000_n.jpg" />
+    <Content Include="Content\chitietcss\48712_urem-nguoi-dang-mo.jpg" />
+    <Content Include="Content\chitietcss\48794_cay-dang-mui-doi.jpg" />
+    <Content Include="Content\chitietcss\5HKcA-gYnCN.css" />
+    <Content Include="Content\chitietcss\atm.jpg" />
+    <Content Include="Content\chitietcss\cod.jpg" />
+    <Content Include="Content\chitietcss\cODuT3uNtyv.css" />
+    <Content Include="Content\chitietcss\comments.html" />
+    <Content Include="Content\chitietcss\f%281%29.txt" />
+    <Content Include="Content\chitietcss\f%282%29.txt" />
+    <Content Include="Content\chitietcss\f.txt" />
+    <Content Include="Content\chitietcss\facebook.png" />
+    <Content Include="Content\chitietcss\fastbutton.html" />
+    <Content Include="Content\chitietcss\fQhAleBKaXi.css" />
+    <Content Include="Content\chitietcss\google.png" />
+    <Content Include="Content\chitietcss\icon-help-circled.png" />
+    <Content Include="Content\chitietcss\icon_delete.ico" />
+    <Content Include="Content\chitietcss\icon_fb_2x.jpg" />
+    <Content Include="Content\chitietcss\icon_g_2x.jpg" />
+    <Content Include="Content\chitietcss\icon_p_2x.jpg" />
+    <Content Include="Content\chitietcss\icon_twt_2x.jpg" />
+    <Content Include="Content\chitietcss\icon_xemtruoc_2x.png" />
+    <Content Include="Content\chitietcss\index.php" />
+    <Content Include="Content\chitietcss\jsb.jpg" />
+    <Content Include="Content\chitietcss\KkQTSUzuEkO.png" />
+    <Content Include="Content\chitietcss\L356sYzA8NH.css" />
+    <Content Include="Content\chitietcss\left_arrow.png" />
+    <Content Include="Content\chitietcss\like%281%29.html" />
+    <Content Include="Content\chitietcss\like.html" />
+    <Content Include="Content\chitietcss\logo_hotdeal_2x.png" />
+    <Content Include="Content\chitietcss\logo_so_cong_thuong.png" />
+    <Content Include="Content\chitietcss\logo_vinabook_gray_2x.png" />
+    <Content Include="Content\chitietcss\logo_yesgo_2x.png" />
+    <Content Include="Content\chitietcss\lsget.html" />
+    <Content Include="Content\chitietcss\mastercard_securecode.jpg" />
+    <Content Include="Content\chitietcss\master_card.jpg" />
+    <Content Include="Content\chitietcss\mdCmC9ntu1o.css" />
+    <Content Include="Content\chitietcss\page%281%29.html" />
+    <Content Include="Content\chitietcss\page.html" />
+    <Content Include="Content\chitietcss\payoo.jpg" />
+    <Content Include="Content\chitietcss\postmessageRelay.html" />
+    <Content Include="Content\chitietcss\standalone.1343766dedc66b0b9582567dec76409c.css" />
+    <Content Include="Content\chitietcss\standalone.2320d1d154e168b45bf0f6dfa26d470c.css" />
+    <Content Include="Content\chitietcss\top-banner.png" />
+    <Content Include="Content\chitietcss\verify_visa.jpg" />
+    <Content Include="Content\chitietcss\visa.jpg" />
+    <Content Include="Content\chitietcss\vnb_logo_2x.png" />
+    <Content Include="Content\chitietcss\webPushAnalytics.html" />
+    <Content Include="Content\css\00ae95e7b629733054aa661caa7be486.jpg" />
+    <Content Include="Content\css\0473cb5a776478a6f825b578fe356307.jpg" />
+    <Content Include="Content\css\0c5e1ba85712a805123f1b50f8cd058e.jpg" />
+    <Content Include="Content\css\135271b4eaa59f03c4fd2bf245a099f1.jpg" />
+    <Content Include="Content\css\14.u4939.d20170925.t164941.263359.jpg" />
+    <Content Include="Content\css\18be1e8563747c0533d3a6bca48d29d7.png" />
+    <Content Include="Content\css\1a4d1ae88a03f6c03d24999aa2055d35.jpg" />
+    <Content Include="Content\css\1e2RywyANNe.html" />
+    <Content Include="Content\css\31faa41dfe6feae3b7303bbb1e36db27.jpg" />
+    <Content Include="Content\css\495420798642eaa7c56af82926386915.png" />
+    <Content Include="Content\css\536dd2367280b443edbe6a7b4b91899b.png" />
+    <Content Include="Content\css\5ba6a3448f3db56c6abf078b29abf6d9.jpg" />
+    <Content Include="Content\css\68fe15132f508360ffb7c07f5a9a2c3e.jpg" />
+    <Content Include="Content\css\6f7ea7182381915e43075aef3a9098f8.png" />
+    <Content Include="Content\css\81d9049b659dc874cbeab272559a7a89.jpg" />
+    <Content Include="Content\css\8f1f2c5091ea2c21ac650313f5e38ee9.jpg" />
+    <Content Include="Content\css\aa7b458a05797db16209c7cf153a81de.png" />
+    <Content Include="Content\css\bf2eb96c6baa2df48cc35808c8b2742d.jpg" />
+    <Content Include="Content\css\bia-1-minh-la-ca.u5505.d20170803.t083606.108681.jpg" />
+    <Content Include="Content\css\buu-thiep-cua-rung.jpg" />
+    <Content Include="Content\css\cam-nang-tu-hoc-ielts--cover-.u3059.d20170613.t094633.695747.jpg" />
+    <Content Include="Content\css\category.css" />
+    <Content Include="Content\css\cs.html" />
+    <Content Include="Content\css\dis.html" />
+    <Content Include="Content\css\ditimlesong20161.u84.d20161125.t134037.152104.jpg" />
+    <Content Include="Content\css\doi-ngan-dung-ngu-dai.jpg" />
+    <Content Include="Content\css\empty-lazy.gif" />
+    <Content Include="Content\css\f%281%29.txt" />
+    <Content Include="Content\css\f.txt" />
+    <Content Include="Content\css\fdc22a17f9e5ff533527d72e0c1a5c82.jpg" />
+    <Content Include="Content\css\ff6803327456b70eb12824a0b7143795.jpg" />
+    <Content Include="Content\css\generic%281%29.gif" />
+    <Content Include="Content\css\generic.gif" />
+    <Content Include="Content\css\graphic-map.png" />
+    <Content Include="Content\css\hanh_trinh_ve_phuong_dong_2.jpg" />
+    <Content Include="Content\css\hinh-6.u4939.d20171009.t095448.393699.jpg" />
+    <Content Include="Content\css\hop-bc1.png" />
+    <Content Include="Content\css\icon-giamgia.png" />
+    <Content Include="Content\css\img117.u3059.d20170616.t100547.729023.jpg" />
+    <Content Include="Content\css\img592.u3059.d20170616.t101749.921069.jpg" />
+    <Content Include="Content\css\kheo-an-noi-se-co-duoc-thien-ha.jpg" />
+    <Content Include="Content\css\khi-hoi-tho-hoa-thinh-khong.u5464.d20170726.t170655.288851.jpg" />
+    <Content Include="Content\css\kira-kira.jpg" />
+    <Content Include="Content\css\logo-bookee.png" />
+    <Content Include="Content\css\new 1.css" />
+    <Content Include="Content\css\p.html" />
+    <Content Include="Content\css\rcj-99d43ead6bdf30da8ed5ffcb4f17100c.html" />
+    <Content Include="Content\css\sach.css" />
+    <Content Include="Content\css\saved_resource%281%29.html" />
+    <Content Include="Content\css\saved_resource.html" />
+    <Content Include="Content\css\sp-style.css" />
+    <Content Include="Content\css\stylelogin.css" />
+    <Content Include="Content\css\tags.html" />
+    <Content Include="Content\css\TextFile1.txt" />
+    <Content Include="Content\css\tuoi-tre-dang-gia-bao-nhieu-u547-d20161012-t113832-888179.u3059.d20170616.t095744.390222.jpg" />
+    <Content Include="Content\css\up.html" />
+    <Content Include="Content\css\usermatch.html" />
+    <Content Include="Content\css\v1.gif" />
+    <Content Include="Content\css\worker.html" />
+    <Content Include="Content\css\_tracking1.html" />
+    <Content Include="Content\images\TextFile1.txt" />
+    <Content Include="Content\js\index.js" />
+    <Content Include="Content\js\TextFile1.txt" />
+    <Content Include="Content\scss\TextFile1.txt" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\User\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Register\Register.cshtml" />
+    <Content Include="Areas\Admin\Views\Login\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\Register\Index.cshtml" />
+    <Content Include="Content\scss\style.scss" />
+    <Content Include="Content\css\1541902979357787" />
+    <Content Include="Content\css\1626984400949421" />
+    <Content Include="Content\css\5e70a0d5a3" />
+    <Content Include="Content\css\admicro-core.min.js.tải xuống" />
+    <Content Include="Content\css\adm_tracking.js.tải xuống" />
+    <Content Include="Content\css\ads_code_1.ads" />
+    <Content Include="Content\css\analytics.js.tải xuống" />
+    <Content Include="Content\css\category.js.tải xuống" />
+    <Content Include="Content\css\css" />
+    <Content Include="Content\css\ec.js.tải xuống" />
+    <Content Include="Content\css\event" />
+    <Content Include="Content\css\fbevents.js.tải xuống" />
+    <Content Include="Content\css\gr_reco5.min.js.tải xuống" />
+    <Content Include="Content\css\gtm.js.tải xuống" />
+    <Content Include="Content\css\hotjar-522327.js.tải xuống" />
+    <Content Include="Content\css\JSServlet4" />
+    <Content Include="Content\css\ld.js.tải xuống" />
+    <Content Include="Content\css\lgnews.js.tải xuống" />
+    <Content Include="Content\css\linkid.js.tải xuống" />
+    <Content Include="Content\css\modernizr.js.tải xuống" />
+    <Content Include="Content\css\modules-cf5028eda4f4b4aeb82e5b7555a3b16e.js.tải xuống" />
+    <Content Include="Content\css\nr-1071.min.js.tải xuống" />
+    <Content Include="Content\css\partner.js.tải xuống" />
+    <Content Include="Content\css\persist.js.tải xuống" />
+    <Content Include="Content\css\platform.js.tải xuống" />
+    <Content Include="Content\css\sdk.js.tải xuống" />
+    <Content Include="Content\css\tags" />
+    <Content Include="Content\css\tiki.vn.js.tải xuống" />
+    <Content Include="Content\css\tp2.js.tải xuống" />
+    <Content Include="Content\css\tp2_core.min.js.tải xuống" />
+    <Content Include="Content\css\universal_pixel.1.1.3.js.tải xuống" />
+    <Content Include="Content\css\up_loader.1.1.0.js.tải xuống" />
+    <Content Include="Content\css\vendor.js.tải xuống" />
+    <Content Include="Content\css\generic" />
+    <Content Include="Content\css\generic%281%29" />
+    <Content Include="Content\css\v1" />
+    <Content Include="Content\chitietcss\1OSdGj0lrI_.js.tải xuống" />
+    <Content Include="Content\chitietcss\25936583-postmessagerelay.js.tải xuống" />
+    <Content Include="Content\chitietcss\591217300967153" />
+    <Content Include="Content\chitietcss\6_wI6_0soEZ.js.tải xuống" />
+    <Content Include="Content\chitietcss\a03sYCXH6hp.js.tải xuống" />
+    <Content Include="Content\chitietcss\ajax.js.tải xuống" />
+    <Content Include="Content\chitietcss\analytics.min.js.tải xuống" />
+    <Content Include="Content\chitietcss\books.js.tải xuống" />
+    <Content Include="Content\chitietcss\bVN3wskBygF.js.tải xuống" />
+    <Content Include="Content\chitietcss\cb=gapi%281%29.loaded_0" />
+    <Content Include="Content\chitietcss\cb=gapi.loaded_0" />
+    <Content Include="Content\chitietcss\cb=gapi.loaded_1" />
+    <Content Include="Content\chitietcss\core.js.tải xuống" />
+    <Content Include="Content\chitietcss\custom.js.tải xuống" />
+    <Content Include="Content\chitietcss\d39ou_DqwSC.js.tải xuống" />
+    <Content Include="Content\chitietcss\dc.js.tải xuống" />
+    <Content Include="Content\chitietcss\Df9-XF3HLFd.js.tải xuống" />
+    <Content Include="Content\chitietcss\e9befd5a0b" />
+    <Content Include="Content\chitietcss\ematic.min.js.tải xuống" />
+    <Content Include="Content\chitietcss\eqLXvYpr1A_.js.tải xuống" />
+    <Content Include="Content\chitietcss\exceptions.js.tải xuống" />
+    <Content Include="Content\chitietcss\excerpt.js.tải xuống" />
+    <Content Include="Content\chitietcss\fbds.js.tải xuống" />
+    <Content Include="Content\chitietcss\fbevents.js.tải xuống" />
+    <Content Include="Content\chitietcss\fKeLj8EnY6m.js.tải xuống" />
+    <Content Include="Content\chitietcss\func.js.tải xuống" />
+    <Content Include="Content\chitietcss\func.min.js.tải xuống" />
+    <Content Include="Content\chitietcss\gtm.js.tải xuống" />
+    <Content Include="Content\chitietcss\hBJma3wXPGk.js.tải xuống" />
+    <Content Include="Content\chitietcss\HctPfGNpOoi.js.tải xuống" />
+    <Content Include="Content\chitietcss\history.js.tải xuống" />
+    <Content Include="Content\chitietcss\inputmask.js.tải xuống" />
+    <Content Include="Content\chitietcss\inputmask.regex.extensions.js.tải xuống" />
+    <Content Include="Content\chitietcss\iscroll-probe.js.tải xuống" />
+    <Content Include="Content\chitietcss\jquery.colorbox-min.js.tải xuống" />
+    <Content Include="Content\chitietcss\jquery.inputmask.js.tải xuống" />
+    <Content Include="Content\chitietcss\jquery.jcarousel.min.js.tải xuống" />
+    <Content Include="Content\chitietcss\jquery.jcarousel_new.js.tải xuống" />
+    <Content Include="Content\chitietcss\jquery.menu-aim.js.tải xuống" />
+    <Content Include="Content\chitietcss\jquery.sliderTabs.js.tải xuống" />
+    <Content Include="Content\chitietcss\jquery.unveil.js.tải xuống" />
+    <Content Include="Content\chitietcss\js.cookie.js.tải xuống" />
+    <Content Include="Content\chitietcss\lSQ2dzdjMnT.js.tải xuống" />
+    <Content Include="Content\chitietcss\m=bdg" />
+    <Content Include="Content\chitietcss\m=bdg%281%29" />
+    <Content Include="Content\chitietcss\m=googleapis_client,gapi_iframes_style_common,gapi_iframes_iframer" />
+    <Content Include="Content\chitietcss\m=googleapis_client,iframes_styles_bubble_internal,gapi_iframes_style_common,gapi_iframes_iframer" />
+    <Content Include="Content\chitietcss\min.js.tải xuống" />
+    <Content Include="Content\chitietcss\modernizr-jquery.js.tải xuống" />
+    <Content Include="Content\chitietcss\nr-1071.min.js.tải xuống" />
+    <Content Include="Content\chitietcss\OneSignalSDK.js.tải xuống" />
+    <Content Include="Content\chitietcss\perfect-scrollbar.jquery.min.js.tải xuống" />
+    <Content Include="Content\chitietcss\platform.js.tải xuống" />
+    <Content Include="Content\chitietcss\rpc_shindig_random.js.tải xuống" />
+    <Content Include="Content\chitietcss\sdk.js.tải xuống" />
+    <Content Include="Content\chitietcss\slider.min.js.tải xuống" />
+    <Content Include="Content\chitietcss\track.js.tải xuống" />
+    <Content Include="Content\chitietcss\trmix.min.js.tải xuống" />
+    <Content Include="Content\chitietcss\u3O0dvRyYe-.js.tải xuống" />
+    <Content Include="Content\chitietcss\UMKeVJzNpAT.js.tải xuống" />
+    <Content Include="Content\chitietcss\VtJGvj3Mk7B.js.tải xuống" />
+    <Content Include="Content\chitietcss\XEumbVH3x6I.js.tải xuống" />
+    <Content Include="Content\chitietcss\xgemius.js.tải xuống" />
+    <Content Include="Content\chitietcss\xyMH-4mwH_y.js.tải xuống" />
+    <Content Include="Content\chitietcss\ZQ8pGuycWTo.js.tải xuống" />
+    <Content Include="Content\chitietcss\ZT0EmH_n-Ug.js.tải xuống" />
+    <Content Include="Content\chitietcss\_4Tv7_Fpq-U.js.tải xuống" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Bookee\Index.cshtml" />
+    <Content Include="Views\Bookee\Register.cshtml" />
+    <Content Include="Views\Bookee\Login.cshtml" />
+    <Content Include="Views\Bookee\DetailBook.cshtml" />
+    <Content Include="Views\Bookee\CategoryBook.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Api\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+    <Folder Include="Areas\User\Controllers\" />
+    <Folder Include="Areas\User\Models\" />
+    <Folder Include="Areas\User\Views\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3576</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3576/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
