@@ -459,8 +459,7 @@
 
                                         <span class="image">
 
-
-                                            @*<img class="product-image img-responsive" src="~/Content/css/31faa41dfe6feae3b7303bbb1e36db27.jpg" alt="">*@
+                                            <img class="product-image img-responsive" src="~/Content/css/31faa41dfe6feae3b7303bbb1e36db27.jpg" alt="">
 
                                             <!--Tên-gía-tên tác giả-->
                                             <span class="product-right-icon">
@@ -469,11 +468,14 @@
                                         </span>
 
                                         <span class="title">
-                                            @Html.TextBoxFor(m => item.BookName)
+                                            @*@item.BookName*@
+                                            <a href="@Url.Action("DetailBook","Bookee",new { bookID = item.BookID })">@Html.DisplayFor(m => item.BookName)</a>
+                                            
                                             @*Bốn Chàng Trai Cùng Nhau Đi Du Lịch*@
                                         </span>
+
                                         @*<p class="author">Yuriko Mamiya</p>*@
-                                        @Html.TextBoxFor(m => item.BookAuthor, new { type = "author" })
+                                        @*@Html.TextBoxFor(m => item.BookAuthor, new { @class = "author" })*@
                                         <p class="price-sale">
                                             @*<span class="final-price">71.400&nbsp;₫</span>
                                                             <span class="price-regular">119.000&nbsp;₫</span>

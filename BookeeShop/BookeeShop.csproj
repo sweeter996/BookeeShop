@@ -349,6 +349,7 @@
     <Folder Include="Areas\User\Controllers\" />
     <Folder Include="Areas\User\Models\" />
     <Folder Include="Areas\User\Views\Shared\" />
+    <Folder Include="Models\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
