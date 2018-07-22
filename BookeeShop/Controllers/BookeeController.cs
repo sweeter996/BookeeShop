@@ -12,9 +12,14 @@ namespace BookeeShop.Controllers
     public class BookeeController : Controller
     {
         // GET: Bookee
+        [HttpGet]
         public ActionResult Index()
         {
-            return View();
+            using (var db = new BookeeDb())
+            {
+                ICollection<BookCategoriesModel> categoryList = db.BookCategories.ToList();
+                return View(categoryList.ToList());
+            }
         }
 
         [HttpGet]
@@ -84,14 +89,28 @@ namespace BookeeShop.Controllers
             return View();
         }
 
-        public ActionResult DetailBook()
+        public ActionResult DetailBook(string bookID)
         {
-            return View();
+            BookInformationModel detailBook = new BookeeDb().BookInformation.FirstOrDefault(book => book.BookID == bookID);
+            return View(detailBook);
         }
 
-        public ActionResult CategoryBook()
+        [HttpGet]
+        public ActionResult CategoryBook(int category)
         {
-            return View();
+            using (var db = new BookeeDb())
+            {
+                var temp = from book in db.BookInformation
+                           where book.CategoryID.CategoryID == category
+                           select new castBookModel
+                           {
+                               BookID = book.BookID,
+                               BookName = book.BookName,
+                               BookCover = book.BookCoverImage,
+                               BookAuthor = book.Bookauthor
+                           };
+                return View(temp.ToList());
+            }
         }
     }
 }

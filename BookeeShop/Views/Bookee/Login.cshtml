@@ -1,4 +1,4 @@
-﻿@*@model BookeeShop.Areas.Admin.Models.cast_RegisterCustomerModel
+﻿@model BookeeShop.Areas.Admin.Models.cast_RegisterCustomerModel
     @{
         Layout = null;
     }
@@ -46,7 +46,27 @@
                             <label style="color:black">
                                 Email<span class="req">*</span>
                             </label>
-                            @Html.TextBoxFor(model => model.Email, new { placeholder = "*", autocomplete = "off", required = "required" })
+                            @Html.TextBoxFor(model => model.Email, new { placeholder = "*", autocomplete = "off", required = "required", @type = "email" })
+                        </div>
+                        <div class="field-wrap">
+                            <label style="color:black">
+                                Password<span class="req">*</span>
+                            </label>
+                            @Html.PasswordFor(model => model.Password, new { placeholder = "*", autocomplete = "off", required = "required" })
+                        </div>
+                        <button type="submit" class="button button-block">Tạo tài khoản</button>
+                    </form>
+                </div>
+
+                <div id="login">
+                    <h1>ĐĂNG NHẬP!</h1>
+
+                    <form action="@Url.Action("Login","Bookee")" method="post">
+                        <div class="field-wrap">
+                            <label style="color:black">
+                                Email<span class="req">*</span>
+                            </label>
+                            @Html.TextBoxFor(model => model.LastName, new { placeholder = "*", autocomplete = "off", required = "required" })
                         </div>
 
                         <div class="field-wrap">
@@ -56,31 +76,7 @@
                             @Html.PasswordFor(model => model.Password, new { placeholder = "*", autocomplete = "off", required = "required" })
                         </div>
 
-                        <button type="submit" class="button button-block">Tạo tài khoản</button>
-
-                    </form>
-                </div>
-
-                <div id="login">
-                    <h1>ĐĂNG NHẬP!</h1>
-
-                    <form action="/" method="post">
-
-                        <div class="field-wrap">
-                            <label style="color:black">
-                                Email<span class="req">*</span>
-                            </label>
-                            <input type="email" required autocomplete="off" />
-                        </div>
-
-                        <div class="field-wrap">
-                            <label style="color:black">
-                                Password<span class="req">*</span>
-                            </label>
-                            <input type="password" required autocomplete="off" />
-                        </div>
-
-                        <button class="button button-block" />Đăng Nhập</button>
+                        <button class="button button-block">Đăng Nhập</button>
 
                     </form>
                 </div>
@@ -94,7 +90,7 @@
 
 
     </body>
-    </html>*@
+    </html>
 
 
 
@@ -191,7 +187,7 @@
 
 
 
-@model BookeeShop.Areas.Admin.Models.cast_RegisterCustomerModel
+@*@model BookeeShop.Areas.Admin.Models.cast_RegisterCustomerModel
 @{
     Layout = null;
 }
@@ -293,4 +289,4 @@
 
 
 </body>
-</html>
+</html>*@

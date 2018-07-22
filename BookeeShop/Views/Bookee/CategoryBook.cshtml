@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<BookeeShop.Models.castBookModel>
 @{
     Layout = null;
 }
@@ -73,18 +73,7 @@
                             <div>
                                 <i class="icon-style-1 tikicon icon-user"></i>
                                 <a href="./login.html">Đăng nhập/Đăng ký</a>
-
-
                                 <div id="id01" class="modal">
-
-
-
-
-
-
-
-
-
                                 </div>
                             </div><div class="box"><ul class="user-ajax-guest"><li id="login_link"><a href="https://tiki.vn/nha-sach-tiki/c8322?src=mega-menu#" title="Đăng Nhập" class="user-name-login"><span class="text">Đăng nhập</span></a></li><li class="user-name-register"><a href="https://tiki.vn/nha-sach-tiki/c8322?src=mega-menu#" title="Tạo tài khoản mới"><span class="text">Tạo tài khoản</span></a></li><li id="login_fb_link"><a class="user-name-loginfb" title="Đăng nhập bằng Facebook" href="javascript: void(0)" data-url="/customer/account/loginFacebook"><span class="icon"><i class="ico ico-facebook"></i></span><span class="text">Đăng nhập bằng Facebook</span></a></li><li id="login_google_link"><a class="user-name-login-google" title="Đăng nhập bằng Google" href="javascript: void(0)" data-url="/customer/account/login_google"><span class="icon"><i class="ico ico-google"></i></span><span class="text">Đăng nhập bằng Google</span></a></li><li id="login_zalo_link"><a class="user-name-login-zalo" title="Đăng nhập bằng Zalo" href="javascript: void(0)" data-url="/customer/account/loginZalo"><span class="icon-wrap"><span class="tikicon icon-zalo"></span></span><span class="text">Đăng nhập bằng Zalo</span></a></li></ul></div>
                         </div>
@@ -461,55 +450,40 @@
                     <div class="swiper-wrapper">
                         <!--Quảng cáo banner Ngoại ngữ trong tầm tay-->
                         <!--Category main banner-->
-                        <div class="swiper-slide swiper-slide-active" style="width: 1000px; height: 1000px;">
-                            <div data-seller-product-id="1621209" data-title="Bốn Chàng Trai Cùng Nhau Đi Du Lịch" data-price="71400" data-id="1621207" data-score="" data-brand="Yuriko Mamiya" data-category="#" tpl="" rel="" class="product-item    ">
-                                <a data-id="1621207" data-score="" href="./chi-tiet.html" title="Bốn Chàng Trai Cùng Nhau Đi Du Lịch" class="">
 
-                                    <span class="image">
+                        @foreach (var item in Model)
+                        {
+                            <div class="swiper-slide swiper-slide-active" style="width: 1000px; height: 1000px;">
+                                <div data-seller-product-id="1621209" data-title="Bốn Chàng Trai Cùng Nhau Đi Du Lịch" data-price="71400" data-id="1621207" data-score="" data-brand="Yuriko Mamiya" data-category="#" tpl="" rel="" class="product-item    ">
+                                    <a data-id="1621207" data-score="" href="./chi-tiet.html" title="Bốn Chàng Trai Cùng Nhau Đi Du Lịch" class="">
 
-                                        <img class="product-image img-responsive" src="~/Content/css/31faa41dfe6feae3b7303bbb1e36db27.jpg" alt="">
+                                        <span class="image">
 
-                                        <!--Tên-gía-tên tác giả-->
-                                        <span class="product-right-icon">
-                                            <i class="tikicon icon-2h"></i>
+
+                                            @*<img class="product-image img-responsive" src="~/Content/css/31faa41dfe6feae3b7303bbb1e36db27.jpg" alt="">*@
+
+                                            <!--Tên-gía-tên tác giả-->
+                                            <span class="product-right-icon">
+                                                <i class="tikicon icon-2h"></i>
+                                            </span>
                                         </span>
-                                    </span>
 
-                                    <span class="title">
-                                        Bốn Chàng Trai Cùng Nhau Đi Du Lịch
-                                    </span>
-                                    <p class="author">Yuriko Mamiya</p>
-                                    <!-- <p class="price-sale">
-                                    <span class="final-price">71.400&nbsp;₫</span>
-                                                    <span class="price-regular">119.000&nbsp;₫</span>
-                                        <span class="sale-tag sale-tag-square">-40%</span> -->
-
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide swiper-slide-active" style="width: 100%;">
-                            <div data-seller-product-id="1621209" data-title="Bốn Chàng Trai Cùng Nhau Đi Du Lịch" data-price="71400" data-id="1621207" data-score="" data-brand="Yuriko Mamiya" data-category="#" tpl="" rel="" class="product-item    ">
-                                <a data-id="1621207" data-score="" href="./chi-tiet.html" title="Bốn Chàng Trai Cùng Nhau Đi Du Lịch" class="">
-
-                                    <span class="image">
-
-                                        <img class="product-image img-responsive" src="~/Content/css/31faa41dfe6feae3b7303bbb1e36db27.jpg" alt="">
-
-                                        <!--Tên-gía-tên tác giả-->
-                                        <span class="product-right-icon">
-                                            <i class="tikicon icon-2h"></i>
+                                        <span class="title">
+                                            @Html.TextBoxFor(m => item.BookName)
+                                            @*Bốn Chàng Trai Cùng Nhau Đi Du Lịch*@
                                         </span>
-                                    </span>
-                                    <span class="title">
-                                        Bốn Chàng Trai Cùng Nhau Đi Du Lịch
-                                    </span>
-                                    <p class="author">Yuriko Mamiya</p>
-                                    <!-- 	<p class="price-sale">
-                                    <span class="final-price">71.400&nbsp;₫</span>
-                                                    <span class="price-regular">119.000&nbsp;₫</span>
-                                        <span class="sale-tag sale-tag-square">-40%</span>		 -->
+                                        @*<p class="author">Yuriko Mamiya</p>*@
+                                        @Html.TextBoxFor(m => item.BookAuthor, new { type = "author" })
+                                        <p class="price-sale">
+                                            @*<span class="final-price">71.400&nbsp;₫</span>
+                                                            <span class="price-regular">119.000&nbsp;₫</span>
+                                                <span class="sale-tag sale-tag-square">-40%</span>*@
+
+                                </div>
                             </div>
-                        </div>
+                        }
+    
+                       
 
                     </div>
                 </div>
