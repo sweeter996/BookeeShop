@@ -1,4 +1,5 @@
-﻿@{
+﻿@model ICollection<BookeeShop.Models.BookCategoriesModel>
+@{
     Layout = null;
 }
 <!DOCTYPE html>
@@ -94,44 +95,10 @@
                             <div id="collapse-category" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-category">
                                 <div class="list-group">
                                     <div class="list-group-item is-top">
-                                        @*Day la 1 category*@
-                                        <a href="./home.html">
-                                            <strong>Nhà Sách Bookee</strong>
-                                        </a>
-                                        @*het cho nay*@
-                                        <a href="./sach-vn.html">
-                                            <strong>Sách Việt Nam</strong>
-                                        </a>
-                                        <a href="./sach-nn.html">
-                                            <strong>Sách Nước Ngoài</strong>
-                                        </a>
-                                        <a href="./sach-makerting.html">
-                                            <strong>Sách Marketting</strong>
-                                        </a>
-                                        <a href="./sach-tamly.html">
-                                            <strong>Tâm Lý - Kỹ Năng Sống</strong>
-                                        </a>
-                                        <a href="./sach-yhoc.html">
-                                            <strong>Y Học - Sức Khoẻ</strong>
-                                        </a>
-                                        <a href="./sach-thethao.html">
-                                            <strong>Thể Thao</strong>
-                                        </a>
-                                        <a href="./sach-phieuluu.html">
-                                            <strong>Phiêu Lưu - Mạo Hiểm</strong>
-                                        </a>
-                                        <a href="./sach-ngoaingu.html">
-                                            <strong>Học Ngoại Ngữ</strong>
-                                        </a>
-                                        <a href="./sach-truyentranh.html">
-                                            <strong>Truyện Tranh</strong>
-                                        </a>
-                                        <a href="./sach-vhvn.html">
-                                            <strong>Văn Học Việt Nam</strong>
-                                        </a>
-                                        <a href="./sach-cntt.html">
-                                            <strong>Công Nghệ Thông Tin</strong>
-                                        </a>
+                                        @foreach (var item in Model)
+                                        {
+                                            @Html.ActionLink(item.CategoryName, "CategoryBook", "Bookee", new { category = item.CategoryID }, null);
+                                        }
                                     </div>
                                 </div>
                             </div>
