@@ -112,5 +112,17 @@ namespace BookeeShop.Controllers
                 return View(temp.ToList());
             }
         }
+
+        [HttpGet]
+        public ActionResult InformationForBill()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Checkout()
+        {
+            return View();
+        }
     }
 }
