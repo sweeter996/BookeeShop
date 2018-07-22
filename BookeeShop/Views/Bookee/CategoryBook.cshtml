@@ -1,0 +1,699 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html class="js no-touchevents -webkit-" lang="" style="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Bookee Store </title>
+
+
+    <link rel="stylesheet" type="text/css" href="~/Content/css/category.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/sach.css">
+
+
+    <style type="text/css">
+        iframe#_hjRemoteVarsFrame {
+            display: none !important;
+            width: 1px !important;
+            height: 1px !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+    </style>
+    <style type="text/css">
+.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:-webkit-sticky;top:0}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_customer_chat_bounce_in_v1{animation-duration:250ms;animation-name:fb_bounce_in_v1}.fb_customer_chat_bounce_out_v1{animation-duration:250ms;animation-name:fb_bounce_out_v1}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_in_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2_mobile_chat_started{animation-duration:300ms;animation-name:fb_bounce_out_v2_mobile_chat_started;transition-timing-function:ease-in}.fb_customer_chat_bubble_pop_in{animation-duration:250ms;animation-name:fb_customer_chat_bubble_bounce_in_animation}.fb_customer_chat_bubble_animated_no_badge{box-shadow:0 3px 12px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_no_badge:hover{box-shadow:0 5px 24px rgba(0, 0, 0, .3)}.fb_customer_chat_bubble_animated_with_badge{box-shadow:-5px 4px 14px rgba(0, 0, 0, .15);transition:box-shadow 150ms linear}.fb_customer_chat_bubble_animated_with_badge:hover{box-shadow:-5px 8px 24px rgba(0, 0, 0, .2)}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}.fb_mobile_overlay_active{background-color:#fff;height:100%;overflow:hidden;position:fixed;visibility:hidden;width:100%}@@keyframes fb_bounce_in_v1{0%{opacity:0;transform:scale(.8, .8);transform-origin:bottom right}80%{opacity:.8;transform:scale(1.03, 1.03)}100%{opacity:1;transform:scale(1, 1)}}@@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@@keyframes fb_bounce_in_v2_mobile_chat_started{0%{opacity:0;top:20px}100%{opacity:1;top:0}}@@keyframes fb_bounce_out_v1{from{opacity:1}to{opacity:0}}@@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@@keyframes fb_bounce_out_v2_mobile_chat_started{0%{opacity:1;top:0}100%{opacity:0;top:20px}}@@keyframes fb_customer_chat_bubble_bounce_in_animation{0%{bottom:6pt;opacity:0;transform:scale(0, 0);transform-origin:center}70%{bottom:18pt;opacity:1;transform:scale(1.2, 1.2)}100%{transform:scale(1, 1)}}</style>
+    <script src="~/Content/css/f.txt"></script>
+    <script type="text/javascript" async="" src="~/Content/css/adm_tracking.js.tải xuống"></script>
+    <script src="~/Content/css/ads_code_1.ads"></script>
+    <script type="text/javascript" src="~/Content/css/lgnews.js.tải xuống"></script>
+</head>
+<body class="tiki-categories chrome">
+
+    <header id="header" class="nav-collapse flash-sale">
+
+        </div>
+        </div>
+        <div class="header-form-container">
+            <div class="container">
+                <a href="#" class="logo">
+                    <i class="tikicon icon-logo-tiki"></i>
+                </a><a href="#" class="flash-sale" target="_blank">
+                    <img src="~/Content/css/logo-bookee.png" style="width: 180px; height: 65px;">
+                </a>
+
+                <div class="form-search">
+                    <form id="search_form" action="#" method="get">
+                        <div class="search-wrap">
+                            <div class="input">
+                                <div class="flex">
+                                    <input type="text" name="q" autocomplete="off" value="" placeholder="Tìm sản phẩm, danh mục hay thương hiệu mong muốn ...">
+                                </div>
+                            </div>
+
+                            <button type="submit">
+                                <i class="tikicon icon-search"></i>
+                                <span>Tìm kiếm</span>
+                            </button>
+
+                        </div>
+                    </form>
+                    <div id="search-suggestion" style="display: none"><div data-reactroot="" class="search-suggestion" style="display: none;"><!-- react-text: 2 --><!-- /react-text --><!-- react-text: 3 --><!-- /react-text --></div></div>
+
+                </div>
+                <div class="header-link">
+                    <div class="user-profile item" id="header-user">
+                        <div data-reactroot="">
+                            <div>
+                                <i class="icon-style-1 tikicon icon-user"></i>
+                                <a href="./login.html">Đăng nhập/Đăng ký</a>
+
+
+                                <div id="id01" class="modal">
+
+
+
+
+
+
+
+
+
+                                </div>
+                            </div><div class="box"><ul class="user-ajax-guest"><li id="login_link"><a href="https://tiki.vn/nha-sach-tiki/c8322?src=mega-menu#" title="Đăng Nhập" class="user-name-login"><span class="text">Đăng nhập</span></a></li><li class="user-name-register"><a href="https://tiki.vn/nha-sach-tiki/c8322?src=mega-menu#" title="Tạo tài khoản mới"><span class="text">Tạo tài khoản</span></a></li><li id="login_fb_link"><a class="user-name-loginfb" title="Đăng nhập bằng Facebook" href="javascript: void(0)" data-url="/customer/account/loginFacebook"><span class="icon"><i class="ico ico-facebook"></i></span><span class="text">Đăng nhập bằng Facebook</span></a></li><li id="login_google_link"><a class="user-name-login-google" title="Đăng nhập bằng Google" href="javascript: void(0)" data-url="/customer/account/login_google"><span class="icon"><i class="ico ico-google"></i></span><span class="text">Đăng nhập bằng Google</span></a></li><li id="login_zalo_link"><a class="user-name-login-zalo" title="Đăng nhập bằng Zalo" href="javascript: void(0)" data-url="/customer/account/loginZalo"><span class="icon-wrap"><span class="tikicon icon-zalo"></span></span><span class="text">Đăng nhập bằng Zalo</span></a></li></ul></div>
+                        </div>
+                    </div>
+                    <div id="header-cart"><a data-reactroot="" rel="nofollow" href="#" class="header-cart item" admicro-data-event="ClickXemGioHang" admicro-data-auto="1" admicro-data-order="false"><i class="tikicon icon-cart"></i><!-- react-text: 3 -->Giỏ hàng<!-- /react-text --><span class="cart-count">0</span><div class="add-to-cart-success" style="display: none;"><span class="close"><i class="tikicon icon-circle-close"></i></span><p class="text"><i class="tikicon icon-circle-tick"></i><!-- react-text: 10 -->Thêm vào giỏ hàng thành công!<!-- /react-text --></p><button class="btn">Xem giỏ hàng và thanh toán</button></div></a></div>
+                    <!-- Tooltip Link social -->
+
+                </div>
+            </div>
+        </div>
+        <div id="main-ajax-recentlyviewed" data-impress-list-title="Header | Sản phẩm bạn đã xem"><div data-reactroot="" class="product-recently-content swiper-carousel-wrapper"></div></div>
+    </header>
+
+
+    <!-- login box -->
+    <div class="modal" id="login-form" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="tiki-icons tiki-icons-close"></i>
+                </button>
+                <div class="modal-body">
+                    <div class="content-left">
+                        <h2>Đăng nhập</h2>
+                        <p>Đăng nhập để theo dõi đơn hàng, lưu <br>danh sách sản phẩm yêu thích, nhận<br> nhiều ưu đãi hấp dẫn.</p>
+                        <img src="~/Content/css/graphic-map.png">
+                    </div>
+                    <div class="content-right">
+                        <div class="tab">
+                            <a class="tab-item active">
+                                Đăng nhập
+                            </a>
+                            <a class="tab-item" id="create-account" href="https://tiki.vn/nha-sach-tiki/c8322?src=mega-menu#" data-dismiss="modal" data-toggle="modal" data-target="#register-form">
+                                Tạo tài khoản
+                            </a>
+                        </div>
+                        <form class="content bv-form" method="POST" action="https://tiki.vn/customer/account/ajaxLogin?ref=https%253A%252F%252Ftiki.vn%252Fnha-sach-tiki%252Fc8322%253Fsrc%253Dmega-menu" id="login_popup_form" novalidate="novalidate">
+                            <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                            <div class="form-group popup_email has-feedback" id="popup_login">
+                                <label class="control-label">Email / SĐT</label>
+                                <input id="popup-login-email" type="text" class="form-control login" name="email" placeholder="Nhập Email hoặc Số điện thoại" data-bv-field="email"><i class="form-control-feedback" data-bv-icon-for="email" style="display: none;"></i>
+                                <span class="help-block ajax-message"></span>
+                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="email" data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng nhập Email hoặc Số điện thoại</small><small class="help-block" data-bv-validator="regexp" data-bv-for="email" data-bv-result="NOT_VALIDATED" style="display: none;">Email hoặc Số điện thoại không hợp lệ</small>
+                            </div>
+
+                            <div class="form-group popup_password has-feedback" id="popup_password">
+                                <label class="control-label">Mật khẩu</label>
+                                <input type="password" id="login_password" class="form-control login" name="password" placeholder="Mật khẩu từ 6 đến 32 ký tự" autocomplete="off" data-bv-field="password"><i class="form-control-feedback" data-bv-icon-for="password" style="display: none;"></i>
+                                <span class="help-block ajax-message"></span>
+                                <small class="help-block" data-bv-validator="stringLength" data-bv-for="password" data-bv-result="NOT_VALIDATED" style="display: none;">Mật khẩu phải dài từ 6 đến 32 ký tự</small>
+                            </div>
+
+
+                            <div class="login-ajax-captcha" style="display:none">
+                                <div id="login-popup-recaptcha"></div>
+                            </div>
+                            <div class="form-group" id="error_captcha" style="margin-bottom: 15px">
+                                <span class="help-block ajax-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <p class="reset">Quên mật khẩu? Nhấn vào <a data-toggle="modal" data-target="#reset-password-form" href="https://tiki.vn/nha-sach-tiki/c8322?src=mega-menu#">đây</a></p>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" id="login_popup_submit" class="btn btn-info btn-block" admicro-data-event="ClickDangNhap" admicro-data-auto="1" admicro-data-order="false">Đăng nhập</button>
+                            </div>
+                            <div class="form-group">
+                                <a class="btn btn-block btn-social btn-facebook user-name-loginfb" title="Đăng nhập bằng Facebook" href="javascript: void(0)" data-url="https://tiki.vn/customer/account/loginFacebook">
+                                    <i class="fa fa-facebook"></i>
+                                    <span>Đăng nhập bằng Facebook</span>
+                                </a>
+                            </div>
+                            <div class="form-group">
+                                <a class="btn btn-block btn-social btn-google user-name-login-google" title="Đăng nhập bằng Google" href="javascript: void(0)" data-url="https://tiki.vn/customer/account/login_google">
+                                    <i class="ico ico-google"></i>
+                                    <span>Đăng nhập bằng Google</span>
+                                </a>
+                            </div>
+
+                            <div class="form-group last">
+                                <a class="btn btn-block btn-social btn-zalo user-name-login-zalo" title="Đăng nhập bằng Zalo" href="javascript: void(0)" data-url="https://tiki.vn/customer/account/loginZalo">
+                                    <span class="icon-wrap">
+                                        <span class="tikicon icon-zalo"></span>
+                                    </span>
+                                    <span>Đăng nhập bằng Zalo</span>
+                                </a>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end login box -->
+    <!-- registration box -->
+    <div class="modal" id="register-form" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="tiki-icons tiki-icons-close"></i>
+                </button>
+                <div class="modal-body">
+                    <div class="content-left">
+                        <h2>Tạo tài khoản</h2>
+                        <p>Tạo tài khoản để theo dõi đơn hàng, lưu<br> danh sách sản phẩm yêu thích, nhận <br>nhiều ưu đãi hấp dẫn.</p>
+                        <img src="~/Content/css/graphic-map.png">
+                    </div>
+                    <div class="content-right">
+                        <div class="tab">
+                            <a class="tab-item" data-toggle="modal" data-target="#login-form">
+                                Đăng nhập
+                            </a>
+                            <a class="tab-item active" id="create-account" href="https://tiki.vn/nha-sach-tiki/c8322?src=mega-menu#" data-dismiss="modal" data-toggle="modal" data-target="#register-form">
+                                Tạo tài khoản
+                            </a>
+                        </div>
+                        <form class="content bv-form" method="POST" action="https://tiki.vn/customer/account/ajaxCreate" id="register_popup_form" novalidate="novalidate">
+                            <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                            <input type="hidden" name="verify" value="1">
+
+                            <div class="left-col">
+                                <div form-group="" id="general_error">
+                                    <span></span>
+                                </div>
+                                <div class="form-group" id="register_name">
+                                    <label class="control-label" for="pasword">Họ tên</label>
+                                    <div class="input-wrap has-feedback">
+                                        <input type="text" tabindex="1" class="form-control register" name="full_name" id="name" placeholder="Nhập họ tên" data-bv-field="full_name"><i class="form-control-feedback bv-no-label" data-bv-icon-for="full_name" style="display: none;"></i>
+                                        <span class="help-block ajax-message"></span>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="full_name" data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng nhập họ tên</small>
+                                    </div>
+                                </div>
+                                <div class="form-group use-phone" id="register_phone">
+                                    <label class="control-label" for="email">SĐT</label>
+                                    <div class="input-wrap has-feedback">
+                                        <input type="text" tabindex="2" class="form-control register" name="phone_number" id="phone_number" placeholder="Nhập số điện thoại" data-bv-field="phone_number"><i class="form-control-feedback bv-no-label" data-bv-icon-for="phone_number" style="display: none;"></i>
+                                        <a id="btn-send-otp" tabindex="3" class="btn-send-otp" href="javascript:;">Gửi mã xác thực</a>
+                                        <span class="help-block ajax-message"></span>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="phone_number" data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng nhập số điện thoại</small>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="register_otp_code">
+                                    <label class="control-label">Mã xác thực</label>
+                                    <div class="input-wrap">
+                                        <input type="text" tabindex="4" class="form-control register" name="otp_code" id="otp_code" placeholder="Nhập mã xác thực gửi tới số điện thoại trên">
+                                        <span class="help-block ajax-message"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="register_email">
+                                    <label class="control-label" for="email">Email</label>
+                                    <div class="input-wrap has-feedback">
+                                        <input type="text" tabindex="5" class="form-control register register-email-input" name="email" id="email" placeholder="Nhập email" data-bv-field="email"><i class="form-control-feedback bv-no-label" data-bv-icon-for="email" style="display: none;"></i>
+                                        <span class="help-block ajax-message"></span>
+                                        <small class="help-block" data-bv-validator="remote" data-bv-for="email" data-bv-result="NOT_VALIDATED" style="display: none;">Email đã tồn tại</small>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="register_password">
+                                    <label class="control-label" for="pasword">Mật khẩu</label>
+                                    <div class="input-wrap has-feedback">
+                                        <input type="password" tabindex="6" class="form-control register" name="password" id="password" placeholder="Mật khẩu từ 6 đến 32 ký tự" autocomplete="off" data-bv-field="password"><i class="form-control-feedback bv-no-label" data-bv-icon-for="password" style="display: none;"></i>
+                                        <span class="help-block ajax-message"></span>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="password" data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng nhập mật khẩu</small><small class="help-block" data-bv-validator="stringLength" data-bv-for="password" data-bv-result="NOT_VALIDATED" style="display: none;">Mật khẩu phải dài từ 6 đến 32 ký tự</small>
+                                    </div>
+                                </div>
+                                <div class="form-group gender-select-wrap" id="register_name">
+                                    <label class="control-label" for="pasword">Giới tính</label>
+                                    <div class="input-wrap has-feedback">
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                <label for="male" class="icheck-wrap gender-select">
+                                                    <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="gender" value="on" id="male" class="gender" data-bv-field="gender" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                                    Nam
+                                                </label>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <label for="female" class="icheck-wrap gender-select">
+                                                    <div class="iradio_square-blue" style="position: relative;"><input type="radio" name="gender" value="off" id="female" class="gender" data-bv-field="gender" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div><i class="form-control-feedback" data-bv-icon-for="gender" style="display: none;"></i>
+                                                    Nữ
+                                                </label>
+                                                <small class="help-block" data-bv-validator="notEmpty" data-bv-for="gender" data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng chọn giới tính</small>
+                                            </div>
+                                        </div>
+                                        <span class="help-block">Vui lòng chọn giới tính</span>
+
+                                    </div>
+                                </div>
+                                <div class="form-group" id="register_birthday">
+                                    <label class="control-label no-lh" for="birthdate">
+                                        Ngày Sinh
+                                    </label>
+                                    <div class="input-wrap">
+                                        <div id="birthday-picker-popup"></div>
+                                        <span class="help-block ajax-message" id="span-birthday"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-wrap">
+                                        <label for="subcribe" class="icheck-wrap is-small">
+                                            <div class="icheckbox_square-blue checked"><input type="checkbox" name="newsletter" class="icheck" checked="" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+                                            Nhận các thông tin và chương trình khuyến mãi của Tiki qua email.
+                                        </label>
+                                        <div class="input-wrap">
+                                            <p class="policy">Khi bạn nhấn Đăng ký, bạn  đã đồng ý thực hiện mọi giao dịch mua bán theo <a target="_blank" href="http://hotro.tiki.vn/hc/vi/articles/201971214">điều kiện sử dụng và chính sách của Tiki</a>.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group last">
+                                    <div class="input-wrap">
+                                        <button type="submit" id="register_popup_submit" class="btn btn-info btn-block btn-register-submit" admicro-data-event="ClickDangKy" admicro-data-auto="1" admicro-data-order="false">Tạo tài khoản</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end registration box -->
+    <!-- Social confirm phone box -->
+    <div class="modal" id="social-confirm-phone-form" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="tiki-icons tiki-icons-close"></i>
+                </button>
+                <div class="modal-body">
+                    <div class="content-right">
+                        <form class="content bv-form" method="POST" action="https://tiki.vn/customer/account/ajaxCreate" id="social_popup_form" novalidate="novalidate">
+                            <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+                            <input type="hidden" name="registration_type" value="">
+                            <input type="hidden" name="social_id" value="">
+                            <input type="hidden" name="full_name" value="">
+                            <input type="hidden" name="avatar">
+                            <input type="hidden" name="birthday" value="">
+                            <input type="hidden" name="email" value="">
+                            <input type="hidden" name="gender" value="">
+                            <h4>Đăng nhập bằng <span></span></h4>
+                            <div class="avatar">
+                                <img src="https://tiki.vn/nha-sach-tiki/c8322?src=mega-menu">
+                                <span></span>
+                            </div>
+                            <div class="left-col">
+                                <div form-group="" class="general_error">
+                                    <span></span>
+                                </div>
+                                <div class="form-group use-phone social_phone">
+                                    <label class="control-label" for="email">Số điện thoại</label>
+                                    <div class="input-wrap has-feedback">
+                                        <input type="text" class="form-control register" autocomplete="off" name="phone_number" placeholder="Nhập số điện thoại" data-bv-field="phone_number"><i class="form-control-feedback bv-no-label" data-bv-icon-for="phone_number" style="display: none;"></i>
+                                        <a class="btn-send-otp" href="javascript:;">Gửi mã xác thực</a>
+                                        <span class="help-block ajax-message"></span>
+                                        <small class="help-block" data-bv-validator="notEmpty" data-bv-for="phone_number" data-bv-result="NOT_VALIDATED" style="display: none;">Vui lòng nhập số điện thoại</small>
+                                    </div>
+                                </div>
+                                <div class="form-group social_otp_code">
+                                    <label class="control-label">Mã xác thực</label>
+                                    <div class="input-wrap">
+                                        <input type="text" class="form-control register" autocomplete="off" name="otp_code" placeholder="Nhập mã xác thực gửi tới số điện thoại trên">
+                                        <span class="help-block ajax-message"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group last">
+                                    <div class="input-wrap">
+                                        <button type="submit" class="btn btn-info btn-block btn-social-submit">Xác nhận</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Social confirm phone box -->
+
+    <div class="modal" id="location-picker-modal" tabindex="-1" role="dialog">
+    </div>
+    <script>
+
+    var banner_native_category = '8322';
+
+    var catalog_indentify = "Category 8322";
+    </script>
+
+    <div class="breadcrumb-wrap">
+        <div class="container">
+            <ul class="breadcrumb">
+                <li><a href="https://tiki.vn/">Trang chủ</a></li>
+                <li style="width: 1165px;"><a href="https://tiki.vn/nha-sach-tiki"><span>Nhà Sách Tiki</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="wrap">
+        <div class="container">
+            <div class="side-bar">
+                <div class="box-left-wrap visible-lg-block" id="boxleft-wrap">
+
+                    <div class="panel-group box-left" id="boxleft" role="tablist" aria-multiselectable="true">
+
+                        <div class="panel panel-info">
+                            <div class="panel-heading" role="tab" id="heading-category">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" href="https://tiki.vn/nha-sach-tiki/c8322?src=mega-menu#collapse-category" aria-expanded="true" aria-controls="collapse-category">
+                                        Danh Mục Sản Phẩm
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse-category" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-category">
+                                <div class="list-group">
+                                    <div class="list-group-item is-top">
+                                        <a href="./home.html">
+                                            <strong>Nhà Sách Bookee</strong>
+                                        </a>
+                                        <a href="./sach-vn.html">
+                                            <strong>Sách Việt Nam</strong>
+                                        </a>
+                                        <a href="./sach-nn.html">
+                                            <strong>Sách Nước Ngoài</strong>
+                                        </a>
+                                        <a href="./sach-makerting.html">
+                                            <strong>Sách Marketting</strong>
+                                        </a>
+                                        <a href="./sach-tamly.html">
+                                            <strong>Tâm Lý - Kỹ Năng Sống</strong>
+                                        </a>
+                                        <a href="./sach-yhoc.html">
+                                            <strong>Y Học - Sức Khoẻ</strong>
+                                        </a>
+                                        <a href="./sach-thethao.html">
+                                            <strong>Thể Thao</strong>
+                                        </a>
+                                        <a href="./sach-phieuluu.html">
+                                            <strong>Phiêu Lưu - Mạo Hiểm</strong>
+                                        </a>
+                                        <a href="./sach-ngoaingu.html">
+                                            <strong>Học Ngoại Ngữ</strong>
+                                        </a>
+                                        <a href="./sach-truyentranh.html">
+                                            <strong>Truyện Tranh</strong>
+                                        </a>
+                                        <a href="./sach-vhvn.html">
+                                            <strong>Văn Học Việt Nam</strong>
+                                        </a>
+                                        <a href="./sach-cntt.html">
+                                            <strong>Công Nghệ Thông Tin</strong>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="product-listing">
+                <div class="product-box no-mg">
+                    <div class="filter-list-box">
+                        <h1> Sách tìm được</h1>
+                        <h4 name="results-count"> 10 kết quả</h4>
+                        <!-- Keyword suggestion list -->
+                    </div>
+                </div>
+
+
+                <div class="swiper-container category-top-banner banner-swiper-wrapper swiper-preview-style swiper-container-horizontal">
+                    <div class="swiper-wrapper">
+                        <!--Quảng cáo banner Ngoại ngữ trong tầm tay-->
+                        <!--Category main banner-->
+                        <div class="swiper-slide swiper-slide-active" style="width: 1000px; height: 1000px;">
+                            <div data-seller-product-id="1621209" data-title="Bốn Chàng Trai Cùng Nhau Đi Du Lịch" data-price="71400" data-id="1621207" data-score="" data-brand="Yuriko Mamiya" data-category="#" tpl="" rel="" class="product-item    ">
+                                <a data-id="1621207" data-score="" href="./chi-tiet.html" title="Bốn Chàng Trai Cùng Nhau Đi Du Lịch" class="">
+
+                                    <span class="image">
+
+                                        <img class="product-image img-responsive" src="~/Content/css/31faa41dfe6feae3b7303bbb1e36db27.jpg" alt="">
+
+                                        <!--Tên-gía-tên tác giả-->
+                                        <span class="product-right-icon">
+                                            <i class="tikicon icon-2h"></i>
+                                        </span>
+                                    </span>
+
+                                    <span class="title">
+                                        Bốn Chàng Trai Cùng Nhau Đi Du Lịch
+                                    </span>
+                                    <p class="author">Yuriko Mamiya</p>
+                                    <!-- <p class="price-sale">
+                                    <span class="final-price">71.400&nbsp;₫</span>
+                                                    <span class="price-regular">119.000&nbsp;₫</span>
+                                        <span class="sale-tag sale-tag-square">-40%</span> -->
+
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide swiper-slide-active" style="width: 100%;">
+                            <div data-seller-product-id="1621209" data-title="Bốn Chàng Trai Cùng Nhau Đi Du Lịch" data-price="71400" data-id="1621207" data-score="" data-brand="Yuriko Mamiya" data-category="#" tpl="" rel="" class="product-item    ">
+                                <a data-id="1621207" data-score="" href="./chi-tiet.html" title="Bốn Chàng Trai Cùng Nhau Đi Du Lịch" class="">
+
+                                    <span class="image">
+
+                                        <img class="product-image img-responsive" src="~/Content/css/31faa41dfe6feae3b7303bbb1e36db27.jpg" alt="">
+
+                                        <!--Tên-gía-tên tác giả-->
+                                        <span class="product-right-icon">
+                                            <i class="tikicon icon-2h"></i>
+                                        </span>
+                                    </span>
+                                    <span class="title">
+                                        Bốn Chàng Trai Cùng Nhau Đi Du Lịch
+                                    </span>
+                                    <p class="author">Yuriko Mamiya</p>
+                                    <!-- 	<p class="price-sale">
+                                    <span class="final-price">71.400&nbsp;₫</span>
+                                                    <span class="price-regular">119.000&nbsp;₫</span>
+                                        <span class="sale-tag sale-tag-square">-40%</span>		 -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end category main banner-->
+    <!-- static block -->
+    <!-- <div class="static-banner-block book-banner-block  hidden-xs">
+
+    </div> -->
+    <!-- end static block -->
+    <!-- <div class="product-box no-mg">
+       <div class="option-box-wrap">
+       <div class="option-box">
+           <div class="sort-box-holder">
+               <div class="btn-group  sort-box abc">
+                   <ul class="sort-list">
+                       <li class="">
+                           <a href="#">HÀNG MỚI</a>
+                       </li>
+                       <li class="">
+                               <a href="#">HÀNG MỚI</a>
+                       </li>
+                       <li class="">
+                               <a href="#">HÀNG MỚI</a>
+                       </li>
+                       <li class="">
+                               <a href="#">HÀNG MỚI</a>
+                       </li>
+                    </ul>
+               </div>
+           </div>
+       </div>
+       </div>
+               <div class="product-box-list abcd">
+       </div>
+    </div> -->
+
+
+    <div class="advisory-posts-box hide">
+    </div>
+    <input name="advisory-api-url" type="hidden" value="https://tiki.vn/tu-van/?api">
+    <input name="advisory-post-limit" type="hidden" value="8">
+    </div>
+    </div>
+    </div>
+
+
+
+
+    <footer id="footer">
+        <div>
+            <i class="icon-newsletter ins-email-icon tikicon"></i><div class="clearfix ins-news-text" style="">
+                <hr class="line-bg-body">
+                <div class="list-footer-nav">
+                    <div class="container">
+                        <div class="footer-nav">
+                            <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+                            <p class="hotline-number">Hotline: 1900-6035</p>
+                            <div class="nav-list">
+                                <a rel="nofollow" href="" target="_blank">(1000đ/phút , 8-21h kể cả T7, CN)</a>
+                                <a rel="nofollow" href="" target="_blank">Các câu hỏi thường gặp</a>
+                                <a rel="nofollow" href="" target="_blank">Gửi yêu cầu hỗ trợ</a>
+                                <a rel="nofollow" href="" target="_blank">Hướng dẫn đặt hàng</a>
+                                <a rel="nofollow" href="" target="_blank">Phương thức vận chuyển</a>
+                                <a rel="nofollow" href="" target="_blank">Chính sách đổi trả</a>
+                                <a rel="nofollow" href="" target="_blank">Hướng dẫn mua trả góp</a>
+                                <a rel="nofollow" href="" target="_blank">Chính sách hàng nhập khẩu</a>
+                            </div>
+                        </div>
+                        <div class="footer-nav">
+                            <h4>VỀ Bookee Store</h4>
+                            <div class="nav-list">
+                                <a rel="nofollow" href="" target="_blank">Giới thiệu Tiki.vn</a>
+                                <a rel="nofollow" href="" target="_blank">Tuyển Dụng</a>
+                                <a rel="nofollow" href="" target="_blank">Chính sách bảo mật</a>
+                                <a rel="nofollow" href="" target="_blank">Chính sách giải quyết khiếu nại</a>
+                                <a rel="nofollow" href="" target="_blank">Điều khoản sử dụng</a>
+                                <a rel="nofollow" href="" target="_blank">Hội Sách Online</a>
+                                <a rel="nofollow" href="" target="_blank">Giới thiệu Tiki Xu</a>
+                                <a rel="nofollow" href="" target="_blank">Tiki Tư Vấn</a>
+                                <a rel="nofollow" href="" target="_blank">Ưu đãi doanh nghiệp</a>
+                            </div>
+                        </div>
+                        <div class="footer-nav">
+                            <h4>HỢP TÁC VÀ LIÊN KIẾT</h4>
+                            <div class="nav-list">
+                                <a rel="nofollow" href="" target="_blank">Quy chế hoạt động Sàn GDTMĐT</a>
+
+                                <a rel="nofollow" href="" target="_blank">Bán hàng cùng Tiki</a>
+                            </div>
+
+                        </div>
+                        <div class="footer-nav">
+                            <h4>PHƯƠNG THỨC THANH TOÁN</h4>
+                        </div>
+
+                    </div>
+                </div>
+
+                <hr class="line-bg-body">
+
+                <address class="footer-address">
+                    <div class="container">
+                        <div class="address-office">
+                            <i class="tikicon icon-location"></i>
+                            <div class="info-address">
+                                <p class="add-real">
+                                    <b>Địa chỉ văn phòng:</b>
+                                    52 Út Tịch, phường 4, quận Tân Bình, thành phố Hồ Chí Minh
+                                </p>
+                                <p>
+                                    Bookee.vn nhận đặt hàng trực tuyến và giao hàng tận nơi, chưa hỗ trợ mua và nhận hàng trực tiếp tại văn phòng hoặc trung tâm xử lý đơn hàng
+                                </p>
+                            </div>
+                        </div>
+                        <div class="address-service">
+                            <div class="info-address">
+                                <p class="add-real">
+                                    <b>Địa chỉ gửi hàng đổi/trả/bảo hành:</b>
+                                    Trung tâm xử lý đơn hàng Bookee - 371 Nguyễn Kiệm, phường 13, quận Gò Vấp, TP. Hồ Chí Minh
+                                </p>
+                                <p>
+                                    (Tham khảo <a rel="nofollow" href="https://tiki.vn/hau-mai" target="_blank">hướng dẫn đổi, trả, bảo hành</a> hoặc liên hệ <span class="number">1900-6035</span> để được hướng dẫn thêm)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </address>
+
+                <div class="footer-cpy-right">
+                    <div class="container">
+                        <div class="cpy-right-info">
+                            <h5>© 2016 - Bản quyền của Công Ty Cổ Phần Bookee - Bookee.vn</h5>
+                            <p>Giấy chứng nhận Đăng ký Kinh doanh số 0309532909 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp ngày 06/01/2018</p>
+                        </div>
+
+                    </div>
+                </div>
+
+    </footer>
+
+    <script>
+$('.form').find('input, textarea').on('keyup blur focus', function (e) {
+
+  var $this = $(this),
+      label = $this.prev('label');
+
+	  if (e.type === 'keyup') {
+			if ($this.val() === '') {
+          label.removeClass('active highlight');
+        } else {
+          label.addClass('active highlight');
+        }
+    } else if (e.type === 'blur') {
+    	if( $this.val() === '' ) {
+    		label.removeClass('active highlight');
+			} else {
+		    label.removeClass('highlight');
+			}
+    } else if (e.type === 'focus') {
+
+      if( $this.val() === '' ) {
+    		label.removeClass('highlight');
+			}
+      else if( $this.val() !== '' ) {
+		    label.addClass('highlight');
+			}
+    }
+
+});
+
+$('.tab a').on('click', function (e) {
+
+  e.preventDefault();
+
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+
+  target = $(this).attr('href');
+
+  $('.tab-content > div').not(target).hide();
+
+  $(target).fadeIn(600);
+
+});</script>
