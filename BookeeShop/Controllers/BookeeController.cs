@@ -114,9 +114,19 @@ namespace BookeeShop.Controllers
         }
 
         [HttpGet]
-        public ActionResult InformationForBill()
+        public ActionResult InformationForBill(string id)
         {
+            StaticVariable.Book_ID = id;
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult InformationForBill(string hoten, string sdt, string diachi)
+        {
+            StaticVariable.Diachi = diachi;
+            StaticVariable.Hoten = hoten;
+            StaticVariable.SDT = sdt;
+            return RedirectToAction("checkout");
         }
 
         [HttpGet]
