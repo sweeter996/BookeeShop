@@ -10,9 +10,9 @@ namespace BookeeShop.Models
     public class BookCategoriesModel
     {
         [Key]
-        public string CategoryID { get; set; }
+        public int CategoryID { get; set; }
         public string CategoryName { get; set; }
 
-        public ICollection<BookInformationModel> ListBook { get; set; }
+        // public ICollection<BookInformationModel> ListBook { get; set; }
     }
 }
