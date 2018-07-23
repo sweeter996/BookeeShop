@@ -9,7 +9,6 @@
 <!--<![endif]-->
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# books: http://ogp.me/ns/books#">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-   
     <title>BookeeShop</title>
     <link rel="stylesheet" type="text/css" href="~/Content/css/category.css">
     <link rel="stylesheet" type="text/css" href="~/Content/css/sach.css">
@@ -55,7 +54,7 @@
                                     </div>
                                 </div>
 
-                                <div class="box"><ul class="user-ajax-guest"><li id="login_link"><a href="https://tiki.vn/nha-sach-tiki/c8322?src=mega-menu#" title="Đăng Nhập" class="user-name-login"><span class="text">Đăng nhập</span></a></li><li class="user-name-register"><a href="https://tiki.vn/nha-sach-tiki/c8322?src=mega-menu#" title="Tạo tài khoản mới"><span class="text">Tạo tài khoản</span></a></li><li id="login_fb_link"><a class="user-name-loginfb" title="Đăng nhập bằng Facebook" href="javascript: void(0)" data-url="/customer/account/loginFacebook"><span class="icon"><i class="ico ico-facebook"></i></span><span class="text">Đăng nhập bằng Facebook</span></a></li><li id="login_google_link"><a class="user-name-login-google" title="Đăng nhập bằng Google" href="javascript: void(0)" data-url="/customer/account/login_google"><span class="icon"><i class="ico ico-google"></i></span><span class="text">Đăng nhập bằng Google</span></a></li><li id="login_zalo_link"><a class="user-name-login-zalo" title="Đăng nhập bằng Zalo" href="javascript: void(0)" data-url="/customer/account/loginZalo"><span class="icon-wrap"><span class="tikicon icon-zalo"></span></span><span class="text">Đăng nhập bằng Zalo</span></a></li></ul></div>
+                                <div class="box"><ul class="user-ajax-guest"><li id="login_link"><a href="#" title="Đăng Nhập" class="user-name-login"><span class="text">Đăng nhập</span></a></li><li class="user-name-register"><a href="https://tiki.vn/nha-sach-tiki/c8322?src=mega-menu#" title="Tạo tài khoản mới"><span class="text">Tạo tài khoản</span></a></li><li id="login_fb_link"><a class="user-name-loginfb" title="Đăng nhập bằng Facebook" href="javascript: void(0)" data-url="/customer/account/loginFacebook"><span class="icon"><i class="ico ico-facebook"></i></span><span class="text">Đăng nhập bằng Facebook</span></a></li><li id="login_google_link"><a class="user-name-login-google" title="Đăng nhập bằng Google" href="javascript: void(0)" data-url="/customer/account/login_google"><span class="icon"><i class="ico ico-google"></i></span><span class="text">Đăng nhập bằng Google</span></a></li><li id="login_zalo_link"><a class="user-name-login-zalo" title="Đăng nhập bằng Zalo" href="javascript: void(0)" data-url="/customer/account/loginZalo"><span class="icon-wrap"><span class="tikicon icon-zalo"></span></span><span class="text">Đăng nhập bằng Zalo</span></a></li></ul></div>
                             </div>
                         </div>
                         <div id="header-cart"><a data-reactroot="" rel="nofollow" href="#" class="header-cart item" admicro-data-event="ClickXemGioHang" admicro-data-auto="1" admicro-data-order="false"><i class="tikicon icon-cart"></i><!-- react-text: 3 -->Giỏ hàng<!-- /react-text --><span class="cart-count">0</span><div class="add-to-cart-success" style="display: none;"><span class="close"><i class="tikicon icon-circle-close"></i></span><p class="text"><i class="tikicon icon-circle-tick"></i><!-- react-text: 10 -->Thêm vào giỏ hàng thành công!<!-- /react-text --></p><button class="btn">Xem giỏ hàng và thanh toán</button></div></a></div>
@@ -140,9 +139,11 @@
                             
                             <div class="product-share-rating-box">
                                 <div class="product-author-share">
+
                                     Tác giả:<span class="author" itemprop="author" title="@Model.Bookauthor">@Html.DisplayFor(m => Model.Bookauthor)</span><br>
 
                                     <label>Nhà xuất bản:</label> <span class="publishers" style="margin-left:100px">@Html.DisplayFor(m => Model.BookPublisher)</span><br>
+
                                 </div>
                                 <div class="clearfix">
                                     <div class="sharethis-box">
@@ -287,7 +288,9 @@
                                         <option value="opel">9</option>
                                         <option value="audi">10</option>
                                     </select>
+
                                     <button class="btn btn-primary btn-custom3" style="margin-left: 16px"><a href="./Thông tin khách hàng.html" style="color:white">@Html.ActionLink("Mua ngay", "InformationForBill", "Bookee", new { id = Model.BookID }, null)</button>
+
                                 </div>
                         </div>
                         <!--add_to_cart_update_57560-->
