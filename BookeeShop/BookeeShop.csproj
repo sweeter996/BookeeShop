@@ -176,114 +176,21 @@
     <Compile Include="Models\BookCategoriesModel.cs" />
     <Compile Include="Models\BookeeDb.cs" />
     <Compile Include="Models\BookInformationModel.cs" />
+    <Compile Include="Models\castBillInfor.cs" />
     <Compile Include="Models\castBookModel.cs" />
-    <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\OrdersModel.cs" />
+    <Compile Include="Models\StaticVariable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\chitietcss\0FwgLGi25wG.png" />
-    <Content Include="Content\chitietcss\137072_chuc-mot-ngay-tot-lanh-bia-mem.jpg" />
-    <Content Include="Content\chitietcss\137825_con-lu-van-chua-qua.jpg" />
-    <Content Include="Content\chitietcss\139252_buoi-chieu-windows-tai-ban-032014.jpg" />
-    <Content Include="Content\chitietcss\140457_ngoi-truong-moi-khi-tai-ban-062014.jpg" />
-    <Content Include="Content\chitietcss\140457_p57560mbiatruoc.jpg" />
-    <Content Include="Content\chitietcss\144411_nguoi-con-ben-mot-dong-song.jpg" />
-    <Content Include="Content\chitietcss\155615_sos.jpg" />
-    <Content Include="Content\chitietcss\156826_van-hoc-tuoi-20-charao-mua-trang.jpg" />
-    <Content Include="Content\chitietcss\156902_van-hoc-tuoi-20-nhiet-doi-buon.jpg" />
-    <Content Include="Content\chitietcss\16299486_1160129687445912_2112726049279090142_n.jpg" />
-    <Content Include="Content\chitietcss\1689415_10152245006574254_1694203289_n.png" />
-    <Content Include="Content\chitietcss\176833_lang-rung-ca-mau.jpg" />
-    <Content Include="Content\chitietcss\199478_co-quen-sau.jpg" />
-    <Content Include="Content\chitietcss\1e2RywyANNe.html" />
-    <Content Include="Content\chitietcss\212501_thien-long-bat-bo-bo-3-tap.jpg" />
-    <Content Include="Content\chitietcss\247635_chuyen-xu-lang-biang-tap-3-tang-kem-so-than-chu.jpg" />
-    <Content Include="Content\chitietcss\247635_p73713m3.jpg" />
-    <Content Include="Content\chitietcss\252777_nhung-con-ca-mac-can.jpg" />
-    <Content Include="Content\chitietcss\26168446_902961146533379_2519617882919434467_n.jpg" />
-    <Content Include="Content\chitietcss\263948_bao-gio-cho-den-ngay-xua.jpg" />
-    <Content Include="Content\chitietcss\281110_cay-chuoi-non-di-giay-xanh-bia-cung-qua-tang-postcard-lich-2018-de-ban-13-to-so.jpg" />
-    <Content Include="Content\chitietcss\285590_con-nhung-bong-mua-tan.jpg" />
-    <Content Include="Content\chitietcss\294135_anh-khong-la-con-cho-cua-em.jpg" />
-    <Content Include="Content\chitietcss\298726_vua-nham-mat-vua-mo-cua-so-tai-ban-2018.jpg" />
-    <Content Include="Content\chitietcss\301648_bon-chang-trai-cung-nhau-di-du-lich.jpg" />
-    <Content Include="Content\chitietcss\305050_co-phai-anh-la-tinh-yeu-cua-em.jpg" />
-    <Content Include="Content\chitietcss\306905_desktopjma1-ti%281%29.jpg" />
-    <Content Include="Content\chitietcss\306905_desktopjma1-ti.jpg" />
-    <Content Include="Content\chitietcss\30704115_1424927110947395_7304740107699879936_n%281%29.jpg" />
-    <Content Include="Content\chitietcss\30704115_1424927110947395_7304740107699879936_n.jpg" />
-    <Content Include="Content\chitietcss\308107_phai-dep-elle-so-93-thang-72018.jpg" />
-    <Content Include="Content\chitietcss\308660_desktop%281%29.jpg" />
-    <Content Include="Content\chitietcss\308660_desktop.jpg" />
-    <Content Include="Content\chitietcss\308991_mua-ngau-thang-bay.jpg" />
-    <Content Include="Content\chitietcss\309001_con-giong-chieu-mua-ha.jpg" />
-    <Content Include="Content\chitietcss\309167_desktop%281%29.jpg" />
-    <Content Include="Content\chitietcss\309167_desktop.jpg" />
-    <Content Include="Content\chitietcss\309606_914249e16b7f69ec230732e9ef6ed7e1a57d02a0ab1e7200c3pimgpshfullsizedistr%281%29.jpg" />
-    <Content Include="Content\chitietcss\309606_914249e16b7f69ec230732e9ef6ed7e1a57d02a0ab1e7200c3pimgpshfullsizedistr.jpg" />
-    <Content Include="Content\chitietcss\309923_desktop5vnk-a2%281%29.jpg" />
-    <Content Include="Content\chitietcss\309923_desktop5vnk-a2.jpg" />
-    <Content Include="Content\chitietcss\310398_desktop%281%29.jpg" />
-    <Content Include="Content\chitietcss\310398_desktop.jpg" />
-    <Content Include="Content\chitietcss\31252864_778991768977105_448573836162498560_n.jpg" />
-    <Content Include="Content\chitietcss\34756424_2092625674352597_6346415002815037440_n.jpg" />
-    <Content Include="Content\chitietcss\35890_toi-thay-hoa-vang-tren-co-xanh-bia-mem.jpg" />
-    <Content Include="Content\chitietcss\36520836_10156436150229254_3943340269096665088_n.png" />
-    <Content Include="Content\chitietcss\36771290_1127899917350504_1211367243477155840_n.jpg" />
-    <Content Include="Content\chitietcss\36852318_2067891253537896_407510452709359616_n.jpg" />
-    <Content Include="Content\chitietcss\36853369_1021041908078157_1017996240874373120_n.jpg" />
-    <Content Include="Content\chitietcss\37195247_1004541026382230_2619673426264064000_n.jpg" />
-    <Content Include="Content\chitietcss\48712_urem-nguoi-dang-mo.jpg" />
-    <Content Include="Content\chitietcss\48794_cay-dang-mui-doi.jpg" />
-    <Content Include="Content\chitietcss\5HKcA-gYnCN.css" />
-    <Content Include="Content\chitietcss\atm.jpg" />
-    <Content Include="Content\chitietcss\cod.jpg" />
-    <Content Include="Content\chitietcss\cODuT3uNtyv.css" />
-    <Content Include="Content\chitietcss\comments.html" />
-    <Content Include="Content\chitietcss\f%281%29.txt" />
-    <Content Include="Content\chitietcss\f%282%29.txt" />
-    <Content Include="Content\chitietcss\f.txt" />
-    <Content Include="Content\chitietcss\facebook.png" />
     <Content Include="Content\chitietcss\fastbutton.html" />
-    <Content Include="Content\chitietcss\fQhAleBKaXi.css" />
-    <Content Include="Content\chitietcss\google.png" />
     <Content Include="Content\chitietcss\icon-help-circled.png" />
-    <Content Include="Content\chitietcss\icon_delete.ico" />
-    <Content Include="Content\chitietcss\icon_fb_2x.jpg" />
-    <Content Include="Content\chitietcss\icon_g_2x.jpg" />
-    <Content Include="Content\chitietcss\icon_p_2x.jpg" />
-    <Content Include="Content\chitietcss\icon_twt_2x.jpg" />
-    <Content Include="Content\chitietcss\icon_xemtruoc_2x.png" />
-    <Content Include="Content\chitietcss\index.php" />
-    <Content Include="Content\chitietcss\jsb.jpg" />
-    <Content Include="Content\chitietcss\KkQTSUzuEkO.png" />
-    <Content Include="Content\chitietcss\L356sYzA8NH.css" />
-    <Content Include="Content\chitietcss\left_arrow.png" />
     <Content Include="Content\chitietcss\like%281%29.html" />
-    <Content Include="Content\chitietcss\like.html" />
-    <Content Include="Content\chitietcss\logo_hotdeal_2x.png" />
-    <Content Include="Content\chitietcss\logo_so_cong_thuong.png" />
-    <Content Include="Content\chitietcss\logo_vinabook_gray_2x.png" />
-    <Content Include="Content\chitietcss\logo_yesgo_2x.png" />
-    <Content Include="Content\chitietcss\lsget.html" />
-    <Content Include="Content\chitietcss\mastercard_securecode.jpg" />
-    <Content Include="Content\chitietcss\master_card.jpg" />
-    <Content Include="Content\chitietcss\mdCmC9ntu1o.css" />
-    <Content Include="Content\chitietcss\page%281%29.html" />
-    <Content Include="Content\chitietcss\page.html" />
-    <Content Include="Content\chitietcss\payoo.jpg" />
-    <Content Include="Content\chitietcss\postmessageRelay.html" />
     <Content Include="Content\chitietcss\standalone.1343766dedc66b0b9582567dec76409c.css" />
     <Content Include="Content\chitietcss\standalone.2320d1d154e168b45bf0f6dfa26d470c.css" />
-    <Content Include="Content\chitietcss\top-banner.png" />
-    <Content Include="Content\chitietcss\verify_visa.jpg" />
-    <Content Include="Content\chitietcss\visa.jpg" />
-    <Content Include="Content\chitietcss\vnb_logo_2x.png" />
-    <Content Include="Content\chitietcss\webPushAnalytics.html" />
     <Content Include="Content\css\00ae95e7b629733054aa661caa7be486.jpg" />
     <Content Include="Content\css\0473cb5a776478a6f825b578fe356307.jpg" />
     <Content Include="Content\css\0c5e1ba85712a805123f1b50f8cd058e.jpg" />
@@ -344,10 +251,14 @@
     <Content Include="Content\css\v1.gif" />
     <Content Include="Content\css\worker.html" />
     <Content Include="Content\css\_tracking1.html" />
+    <Content Include="Content\donhangcss\hotline.png" />
+    <Content Include="Content\donhangcss\payment.css" />
     <Content Include="Content\images\TextFile1.txt" />
     <Content Include="Content\js\index.js" />
     <Content Include="Content\js\TextFile1.txt" />
     <Content Include="Content\scss\TextFile1.txt" />
+    <Content Include="Content\thongtincss\hotline.png" />
+    <Content Include="Content\thongtincss\shipping.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -399,73 +310,6 @@
     <Content Include="Content\css\generic" />
     <Content Include="Content\css\generic%281%29" />
     <Content Include="Content\css\v1" />
-    <Content Include="Content\chitietcss\1OSdGj0lrI_.js.tải xuống" />
-    <Content Include="Content\chitietcss\25936583-postmessagerelay.js.tải xuống" />
-    <Content Include="Content\chitietcss\591217300967153" />
-    <Content Include="Content\chitietcss\6_wI6_0soEZ.js.tải xuống" />
-    <Content Include="Content\chitietcss\a03sYCXH6hp.js.tải xuống" />
-    <Content Include="Content\chitietcss\ajax.js.tải xuống" />
-    <Content Include="Content\chitietcss\analytics.min.js.tải xuống" />
-    <Content Include="Content\chitietcss\books.js.tải xuống" />
-    <Content Include="Content\chitietcss\bVN3wskBygF.js.tải xuống" />
-    <Content Include="Content\chitietcss\cb=gapi%281%29.loaded_0" />
-    <Content Include="Content\chitietcss\cb=gapi.loaded_0" />
-    <Content Include="Content\chitietcss\cb=gapi.loaded_1" />
-    <Content Include="Content\chitietcss\core.js.tải xuống" />
-    <Content Include="Content\chitietcss\custom.js.tải xuống" />
-    <Content Include="Content\chitietcss\d39ou_DqwSC.js.tải xuống" />
-    <Content Include="Content\chitietcss\dc.js.tải xuống" />
-    <Content Include="Content\chitietcss\Df9-XF3HLFd.js.tải xuống" />
-    <Content Include="Content\chitietcss\e9befd5a0b" />
-    <Content Include="Content\chitietcss\ematic.min.js.tải xuống" />
-    <Content Include="Content\chitietcss\eqLXvYpr1A_.js.tải xuống" />
-    <Content Include="Content\chitietcss\exceptions.js.tải xuống" />
-    <Content Include="Content\chitietcss\excerpt.js.tải xuống" />
-    <Content Include="Content\chitietcss\fbds.js.tải xuống" />
-    <Content Include="Content\chitietcss\fbevents.js.tải xuống" />
-    <Content Include="Content\chitietcss\fKeLj8EnY6m.js.tải xuống" />
-    <Content Include="Content\chitietcss\func.js.tải xuống" />
-    <Content Include="Content\chitietcss\func.min.js.tải xuống" />
-    <Content Include="Content\chitietcss\gtm.js.tải xuống" />
-    <Content Include="Content\chitietcss\hBJma3wXPGk.js.tải xuống" />
-    <Content Include="Content\chitietcss\HctPfGNpOoi.js.tải xuống" />
-    <Content Include="Content\chitietcss\history.js.tải xuống" />
-    <Content Include="Content\chitietcss\inputmask.js.tải xuống" />
-    <Content Include="Content\chitietcss\inputmask.regex.extensions.js.tải xuống" />
-    <Content Include="Content\chitietcss\iscroll-probe.js.tải xuống" />
-    <Content Include="Content\chitietcss\jquery.colorbox-min.js.tải xuống" />
-    <Content Include="Content\chitietcss\jquery.inputmask.js.tải xuống" />
-    <Content Include="Content\chitietcss\jquery.jcarousel.min.js.tải xuống" />
-    <Content Include="Content\chitietcss\jquery.jcarousel_new.js.tải xuống" />
-    <Content Include="Content\chitietcss\jquery.menu-aim.js.tải xuống" />
-    <Content Include="Content\chitietcss\jquery.sliderTabs.js.tải xuống" />
-    <Content Include="Content\chitietcss\jquery.unveil.js.tải xuống" />
-    <Content Include="Content\chitietcss\js.cookie.js.tải xuống" />
-    <Content Include="Content\chitietcss\lSQ2dzdjMnT.js.tải xuống" />
-    <Content Include="Content\chitietcss\m=bdg" />
-    <Content Include="Content\chitietcss\m=bdg%281%29" />
-    <Content Include="Content\chitietcss\m=googleapis_client,gapi_iframes_style_common,gapi_iframes_iframer" />
-    <Content Include="Content\chitietcss\m=googleapis_client,iframes_styles_bubble_internal,gapi_iframes_style_common,gapi_iframes_iframer" />
-    <Content Include="Content\chitietcss\min.js.tải xuống" />
-    <Content Include="Content\chitietcss\modernizr-jquery.js.tải xuống" />
-    <Content Include="Content\chitietcss\nr-1071.min.js.tải xuống" />
-    <Content Include="Content\chitietcss\OneSignalSDK.js.tải xuống" />
-    <Content Include="Content\chitietcss\perfect-scrollbar.jquery.min.js.tải xuống" />
-    <Content Include="Content\chitietcss\platform.js.tải xuống" />
-    <Content Include="Content\chitietcss\rpc_shindig_random.js.tải xuống" />
-    <Content Include="Content\chitietcss\sdk.js.tải xuống" />
-    <Content Include="Content\chitietcss\slider.min.js.tải xuống" />
-    <Content Include="Content\chitietcss\track.js.tải xuống" />
-    <Content Include="Content\chitietcss\trmix.min.js.tải xuống" />
-    <Content Include="Content\chitietcss\u3O0dvRyYe-.js.tải xuống" />
-    <Content Include="Content\chitietcss\UMKeVJzNpAT.js.tải xuống" />
-    <Content Include="Content\chitietcss\VtJGvj3Mk7B.js.tải xuống" />
-    <Content Include="Content\chitietcss\XEumbVH3x6I.js.tải xuống" />
-    <Content Include="Content\chitietcss\xgemius.js.tải xuống" />
-    <Content Include="Content\chitietcss\xyMH-4mwH_y.js.tải xuống" />
-    <Content Include="Content\chitietcss\ZQ8pGuycWTo.js.tải xuống" />
-    <Content Include="Content\chitietcss\ZT0EmH_n-Ug.js.tải xuống" />
-    <Content Include="Content\chitietcss\_4Tv7_Fpq-U.js.tải xuống" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -496,6 +340,8 @@
     <Content Include="Views\Bookee\Login.cshtml" />
     <Content Include="Views\Bookee\DetailBook.cshtml" />
     <Content Include="Views\Bookee\CategoryBook.cshtml" />
+    <Content Include="Views\Bookee\InformationForBill.cshtml" />
+    <Content Include="Views\Bookee\Checkout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -535,7 +381,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>3576</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

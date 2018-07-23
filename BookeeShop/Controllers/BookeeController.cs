@@ -112,5 +112,31 @@ namespace BookeeShop.Controllers
                 return View(temp.ToList());
             }
         }
+
+        [HttpGet]
+        public ActionResult InformationForBill(string id)
+        {
+            StaticVariable.Book_ID = id;
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult InformationForBill(castBillInfor paymentInfor)
+        {
+            StaticVariable.HoTen = paymentInfor.HoTen;
+            StaticVariable.Phone = paymentInfor.Phone;
+            StaticVariable.City = paymentInfor.City;
+            StaticVariable.District = paymentInfor.District;
+            StaticVariable.State = paymentInfor.State;
+            StaticVariable.Address = paymentInfor.Address;
+            return RedirectToAction("checkout");
+        }
+
+        [HttpGet]
+        public ActionResult Checkout()
+        {
+            //tim ra duoc cuon sach voi id = id static
+            return View();
+        }
     }
 }

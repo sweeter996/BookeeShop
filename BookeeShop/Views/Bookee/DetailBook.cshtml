@@ -1,4 +1,4 @@
-﻿
+﻿@model BookeeShop.Models.BookInformationModel
 @{
     Layout = null;
 }
@@ -9,18 +9,7 @@
 <!--<![endif]-->
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# books: http://ogp.me/ns/books#">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script type="text/javascript" src="~/Content/chitietcss/e9befd5a0b"></script>
-    <script src="./Ngôi Trường Mọi Khi - Tái bản 06_2014 - Nguyễn Nhật Ánh - GIẢM 20% _ Vinabook.com_files/nr-1071.min.js.tải xuống"></script>
-    <script type="text/javascript" async="" src="./Ngôi Trường Mọi Khi - Tái bản 06_2014 - Nguyễn Nhật Ánh - GIẢM 20% _ Vinabook.com_files/track.js.tải xuống" id="cio-tracker" data-site-id="89edc8361e713ed7558f"></script>
-    <script src="./Ngôi Trường Mọi Khi - Tái bản 06_2014 - Nguyễn Nhật Ánh - GIẢM 20% _ Vinabook.com_files/cb=gapi.loaded_1" async=""></script>
-    <script src="./Ngôi Trường Mọi Khi - Tái bản 06_2014 - Nguyễn Nhật Ánh - GIẢM 20% _ Vinabook.com_files/cb=gapi(1).loaded_0" async=""></script>
-    <script async="" src="https://rec.hotdeal.vn:8081/logvinabook?callback=jQuery19108784358413662712_1531570685074&amp;api=logApi.view&amp;ts=1531570768&amp;sig=5a5bd7ec713310928c0258e111f12e6f&amp;url=https%3A%2F%2Fwww.vinabook.com%2Fngoi-truong-moi-khi-tai-ban-062014-p57560.html%3Fsef_rewrite%3D1&amp;customer_id=eb8b2dca-7d63-43f0-9abf-257ac9abe60f&amp;product_id=57560&amp;_=1531570685075"></script>
-    <script type="text/javascript" async="" src="./Ngôi Trường Mọi Khi - Tái bản 06_2014 - Nguyễn Nhật Ánh - GIẢM 20% _ Vinabook.com_files/analytics.min.js.tải xuống"></script>
-    <script async="" src="./Ngôi Trường Mọi Khi - Tái bản 06_2014 - Nguyễn Nhật Ánh - GIẢM 20% _ Vinabook.com_files/fbds.js.tải xuống"></script>
-    <script type="text/javascript" async="" src="./Ngôi Trường Mọi Khi - Tái bản 06_2014 - Nguyễn Nhật Ánh - GIẢM 20% _ Vinabook.com_files/platform.js.tải xuống" gapi_processed="true"></script>
-    <script id="facebook-jssdk" src="./Ngôi Trường Mọi Khi - Tái bản 06_2014 - Nguyễn Nhật Ánh - GIẢM 20% _ Vinabook.com_files/sdk.js.tải xuống"></script>
-    <script async="" src="./Ngôi Trường Mọi Khi - Tái bản 06_2014 - Nguyễn Nhật Ánh - GIẢM 20% _ Vinabook.com_files/gtm.js.tải xuống"></script>
-    <script async="" src="./Ngôi Trường Mọi Khi - Tái bản 06_2014 - Nguyễn Nhật Ánh - GIẢM 20% _ Vinabook.com_files/saved_resource"></script>
+   
     <title>BookeeShop</title>
     <link rel="stylesheet" type="text/css" href="~/Content/css/category.css">
     <link rel="stylesheet" type="text/css" href="~/Content/css/sach.css">
@@ -147,10 +136,13 @@
                         </div>
                         <div class="product-info">
 
-                            <h1 class="mainbox-title" itemprop="name">Bốn Chàng Trai Cùng Nhau Đi Du Lịch</h1>
+                            <h1 class="mainbox-title" itemprop="name">@Html.DisplayFor(m => Model.BookName)</h1>
+                            
                             <div class="product-share-rating-box">
                                 <div class="product-author-share">
-                                    Tác giả:                                 <span class="author" itemprop="author" title="Tác giả Nguyễn Nhật Ánh">Muniko Maniya</span>                            <br>                                                                                                                                        <label>Nhà xuất bản:</label> <span class="publishers" style="margin-left:100px">Nxb Trẻ</span><br>                        <label>Nhà phát hành:</label> <span class="publishers" style="margin-left:100px" title="Nhà phát hành NXB Trẻ">NXB Trẻ</span><br>
+                                    Tác giả:<span class="author" itemprop="author" title="@Model.Bookauthor">@Html.DisplayFor(m => Model.Bookauthor)</span><br>
+
+                                    <label>Nhà xuất bản:</label> <span class="publishers" style="margin-left:100px">@Html.DisplayFor(m => Model.BookPublisher)</span><br>
                                 </div>
                                 <div class="clearfix">
                                     <div class="sharethis-box">
@@ -159,17 +151,12 @@
                                     </div>
                                 </div>
                                 <div class="product-discussion-total-rating">
-
-
-
-
                                 </div>
                             </div>
 
                             <div class="mainbox2-container introduction-contents">
                                 <div class="mainbox2-body" itemprop="description">
-
-                                    Bốn Chàng Trai Cùng Nhau Đi Du Lịch. Mashima – một anh chàng thật thà và thụ động.. Shigeta – một nhà nghiên cứu thường thường bậc trung, đã có một đời vợ.. Nakasugi – một anh chàng luôn bị cô bạn gái kiểm soát, có ưu điểm là dễ gây thiện cảm cho người đối diện.. Và Saiki – một anh chàng cực kì đẹp trai nhưng tính khí lạ đời.. Không ...
+                                    @Html.DisplayFor(m => Model.BookIntroduction)
                                     <!--<a title="Xem thêm Giới thiệu về nội dung Ngôi Trường Mọi Khi - Tái bản 06/2014" class="readmore-detail" href="javascript:void(0)" onclick="$.scrollToElm($('#product-full-description'));">Xem thêm</a>-->
                                 </div>
                                 <div class="mainbox2-bottom"><span>&nbsp;</span></div>
@@ -179,25 +166,10 @@
 
                                 <li><strong>Có dịch vụ bọc sách plastic cao cấp cho sách này</strong>  </li>
                                 <li>Miễn phí giao hàng toàn quốc cho Đơn hàng từ 250.000đ (Áp dụng từ 1/2/2015.) </li>
-
-
-
                                 <!-- Dat - Modified 23/4/2018
                                     Add product information included
                                 -->
-
-
                             </ul>
-
-
-
-
-
-
-
-
-
-
                         </div>
                         <div class="product-info-right">
                             <div class="title">Thông tin thanh toán</div>
@@ -238,7 +210,7 @@
                                         <span class="cm-reload-57560 old_price_update" id="old_price_update_57560">
                                             <input type="hidden" name="appearance[show_price_values]" value="1">
                                             <input type="hidden" name="appearance[show_old_price]" value="1">
-                                            <span class="list-price" id="line_list_price_57560"><span class="list-price-label">Giá bìa</span> <span class="strike"><span id="sec_list_price_57560" class="list-price nowrap">59.000</span>&nbsp;<span class="list-price nowrap">₫</span></span></span>
+                                            <span class="list-price" id="line_list_price_57560"><span class="list-price-label">Giá bìa</span> <span class="strike"><span id="sec_list_price_57560" class="list-price nowrap">0</span>&nbsp;<span class="list-price nowrap">₫</span></span></span>
                                         </span>
                                         &nbsp;
                                         <p class="actual-price">
@@ -249,7 +221,7 @@
                                                 <input type="hidden" name="appearance[show_price_values]" value="1">
                                                 <input type="hidden" name="appearance[show_price]" value="1">
 
-                                                <span class="price" id="line_discounted_price_57560"> <span id="sec_discounted_price_57560" class="price-num">47.200</span>&nbsp;<span class="price-num">₫</span></span>
+                                                <span class="price" id="line_discounted_price_57560"> <span id="sec_discounted_price_57560" class="price-num">@Html.DisplayFor(m => Model.BookPrice)</span>&nbsp;<span class="price-num">₫</span></span>
 
                                                 <!--price_update_57560-->
                                             </span>
@@ -261,7 +233,7 @@
                                         <span class="line_discount_update cm-reload-57560" id="line_discount_update_57560">
                                             <input type="hidden" name="appearance[show_price_values]" value="1">
                                             <input type="hidden" name="appearance[show_list_discount]" value="1">
-                                            <div class="list-price save-price nowrap" id="line_discount_value_57560"><span class="float-left">Tiết kiệm</span> <div class="float-right"><span id="sec_discount_value_57560" class="list-price nowrap">11.800</span>&nbsp;<span class="list-price nowrap">₫</span>&nbsp;<span id="prc_discount_value_57560" class="list-price nowrap">(20%)</span></div></div>
+                                            <div class="list-price save-price nowrap" id="line_discount_value_57560"><span class="float-left">Tiết kiệm</span> <div class="float-right"><span id="sec_discount_value_57560" class="list-price nowrap">0</span>&nbsp;<span class="list-price nowrap">₫</span>&nbsp;<span id="prc_discount_value_57560" class="list-price nowrap">(0%)</span></div></div>
                                             <!--line_discount_update_57560-->
                                         </span>
 
@@ -274,7 +246,7 @@
                                                     <span class="list-price nowrap">Loại A</span>
                                                     <div class="vnb-tooltip vnb-tooltip-quality">
                                                         <span class="hideShowPopUp ">
-                                                            <img src="~/Content/chitietcss/icon-help-circled.png">
+                                                            <img src="~/Content/s/icon-help-circled.png">
                                                         </span>
                                                         <div class="vnb-tooltip-content">
                                                             <div class="content">
@@ -282,7 +254,7 @@
                                                                     Sách mới 100% do từ NXB hoặc Nhà Phát Hành chuyển qua
                                                                 </p>
                                                                 <div class="seeMore">
-                                                                    <a href="https://www.vinabook.com/support/kb/faq.php?id=47" target="_blank"><i><p style="text-color=#66645c" ;="">Xem thêm&gt;&gt;&gt;</p></i></a>
+                                                                    <a href="#" target="_blank"><i><p style="text-color=#66645c" ;="">Xem thêm&gt;&gt;&gt;</p></i></a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -315,7 +287,7 @@
                                         <option value="opel">9</option>
                                         <option value="audi">10</option>
                                     </select>
-                                    <button type="submit" class="btn btn-primary btn-custom3" style="margin-left: 16px"><a href="./Thông tin khách hàng.html" style="color:white">Mua ngay</button>
+                                    <button class="btn btn-primary btn-custom3" style="margin-left: 16px"><a href="./Thông tin khách hàng.html" style="color:white">@Html.ActionLink("Mua ngay", "InformationForBill", "Bookee", new { id = Model.BookID }, null)</button>
                                 </div>
                         </div>
                         <!--add_to_cart_update_57560-->

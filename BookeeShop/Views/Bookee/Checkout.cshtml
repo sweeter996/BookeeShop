@@ -1,0 +1,152 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!-- saved from url=(0032)https://tiki.vn/checkout/payment -->
+<html class="js no-touchevents -webkit-" lang="" style="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <title>Thông tin thanh toán</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/donhangcss/payment.css">
+
+    <body class="tiki-payment chrome">
+        <!-- Social confirm phone box -->
+        <div class="shipping-header">
+            <div class="container">
+                <div class="row row-style-1">
+
+                    <div class="col-lg-1">
+                        <div class="row bs-wizard">
+                            <!--<div class="col-lg-4 col-md-4 col-xs-4 col-sm-4 bs-wizard-step complete">
+                                <div class="text-center bs-wizard-stepnum">
+                                    <span>Đăng Nhập</span>
+                                </div>
+                                <div class="progress"><div class="progress-bar"></div></div>
+                                <span class="bs-wizard-dot">1</span>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4 bs-wizard-step complete">
+                                <div class="text-center bs-wizard-stepnum">
+                                    <span class="hidden-xs">Địa Chỉ Giao Hàng</span>
+                                    <span class="visible-xs-inline-block">Địa Chỉ</span>
+                                </div>
+                                <div class="progress"><div class="progress-bar"></div></div>
+                                <span class="bs-wizard-dot">2</span>
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-xs-4 col-sm-4 bs-wizard-step active">
+                                <div class="text-center bs-wizard-stepnum">
+                                    <span class="hidden-xs">Thanh Toán &amp; Đặt Mua</span>
+                                    <span class="visible-xs-inline-block">Thanh Toán</span>
+                                </div>
+                                <div class="progress"><div class="progress-bar"></div></div>
+                                <span class="bs-wizard-dot">3</span>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="col-lg-6 visible-lg-block">
+                        <a href="#" style="font-size:30px" height="62" width="149" class="img-responsive" alt="Image">BookeeShop</a>
+                    </div>
+                    <div class="col-lg-2 visible-lg-block hotline">
+                        <img src="~/Content/donhangcss/hotline.png" height="42" width="176" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="container">
+                <h3 style="margin-left: 200px;">
+                    * Thanh toán đơn hàng *
+                </h3>
+            </div>
+        </div>
+        <div class="wrap" style="center">
+            <div class="container">
+
+                <div class="wrap">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-6">
+                        <div class="panel panel-default cart">
+                            <div class="panel-body">
+                                <div class="order">
+                                    <span class="title">
+                                        Địa chỉ giao hàng
+                                    </span>
+                                    <a href="./Thông tin khách hàng.html" class="btn btn-default btn-custom1">Sửa</a>
+                                </div>
+                                <div class="information">
+                                    @*<h6>@BookeeShop.Models.StaticVariable.Address</h6>*@
+                                    <p class="end">
+                                        Họ tên: @BookeeShop.Models.StaticVariable.HoTen <br>
+                                        Số điện thoại: @BookeeShop.Models.StaticVariable.Phone <br>
+                                        Địa chỉ: @BookeeShop.Models.StaticVariable.Address <br>
+                                        Phường: @BookeeShop.Models.StaticVariable.State <br>
+                                        Quận: @BookeeShop.Models.StaticVariable.District <br>
+                                        Thành phố: @BookeeShop.Models.StaticVariable.City
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="panel-cart">
+                            <div class="panel panel-default cart">
+                                <div class="panel-body">
+                                    <div class="order">
+                                        <span class="title">Đơn Hàng</span>
+                                        <span class="title"> (1 sản phẩm)</span>
+                                        <a href="#" class="btn btn-default btn-custom1">Sửa</a>
+                                    </div>
+                                    <div class="product">
+                                        <div class="item">
+                                            <p class="title">
+                                                <strong>1 x</strong><a href="https://tiki.vn/bon-chang-trai-cung-nhau-di-du-lich-p1621207.html?spid=1621209" target="_blank">Bốn Chàng Trai Cùng Nhau Đi Du Lịch</a>
+                                                <span class="seller-by">
+                                                    Cung cấp bởi <strong class="firm">Tiki Trading</strong>
+                                                </span>
+                                            </p>
+
+                                            <p class="price text-right">
+                                                <span>71.400&nbsp;₫ </span>
+                                                <br>
+                                                <img srcset="https://vcdn.tikicdn.com/desktop/img/2h-circle.png 1x, https://vcdn.tikicdn.com/desktop/img/2h-circle@2x.png 2x" class="img2h" width="22" alt="Hỗ trợ giao hàng nhanh 2h tại TPHCM và HN" title="Hỗ trợ giao hàng nhanh 2h tại TPHCM và HN">
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="list-info-price">
+                                        <b>Tạm tính</b>
+                                        <span>71.400&nbsp;₫</span>
+                                    </p>
+                                    <p class="list-info-price">
+                                        <b>Phí vận chuyển</b>
+                                        <span>18.000&nbsp;₫</span>
+                                    </p>
+
+                                    <p class="total2">
+                                        Thành tiền:
+                                        <span>89.400&nbsp;₫ </span>
+                                    </p>
+                                    <p class="text-right">
+                                        <i>(Đã bao gồm VAT)</i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4"></div>
+
+                    <div class="form-group row end">
+                        <div class="col-lg-6" style="margin-left: 610px;">
+                            <button type="button" id="btn-placeorder" class="btn btn-block btn-default btn-checkout">ĐẶT MUA</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
