@@ -14,7 +14,6 @@
     <link rel="stylesheet" type="text/css" href="~/Content/css/category.css">
     <link rel="stylesheet" type="text/css" href="~/Content/css/sach.css">
 
-
     <style type="text/css">
         iframe#_hjRemoteVarsFrame {
             display: none !important;
@@ -107,11 +106,11 @@
                             <a class="tab-item active">
                                 Đăng nhập
                             </a>
-                            <a class="tab-item" id="create-account" href="https://tiki.vn/nha-sach-tiki/c8322?src=mega-menu#" data-dismiss="modal" data-toggle="modal" data-target="#register-form">
+                            <a class="tab-item" id="create-account" href="#" data-dismiss="modal" data-toggle="modal" data-target="#register-form">
                                 Tạo tài khoản
                             </a>
                         </div>
-                        <form class="content bv-form" method="POST" action="https://tiki.vn/customer/account/ajaxLogin?ref=https%253A%252F%252Ftiki.vn%252Fnha-sach-tiki%252Fc8322%253Fsrc%253Dmega-menu" id="login_popup_form" novalidate="novalidate">
+                        <form class="content bv-form" method="POST" action="" id="login_popup_form" novalidate="novalidate">
                             <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
                             <div class="form-group popup_email has-feedback" id="popup_login">
                                 <label class="control-label">Email / SĐT</label>
@@ -189,7 +188,7 @@
                             <a class="tab-item" data-toggle="modal" data-target="#login-form">
                                 Đăng nhập
                             </a>
-                            <a class="tab-item active" id="create-account" href="https://tiki.vn/nha-sach-tiki/c8322?src=mega-menu#" data-dismiss="modal" data-toggle="modal" data-target="#register-form">
+                            <a class="tab-item active" id="create-account" href="#" data-dismiss="modal" data-toggle="modal" data-target="#register-form">
                                 Tạo tài khoản
                             </a>
                         </div>
@@ -374,7 +373,7 @@
     </div>
 
     <div class="wrap">
-        <div class="container">
+        <div class="container" style="max-height: 5000px;">
             <div class="side-bar">
                 <div class="box-left-wrap visible-lg-block" id="boxleft-wrap">
 
@@ -437,6 +436,7 @@
                 </div>
             </div>
             <div class="product-listing">
+                <div class=""product-box-list abcd" style="margin-left: 20px;">
                 <div class="product-box no-mg">
                     <div class="filter-list-box">
                         <h1> Sách tìm được</h1>
@@ -453,7 +453,7 @@
 
                         @foreach (var item in Model)
                         {
-                            <div class="swiper-slide swiper-slide-active" style="width: 1000px; height: 1000px;">
+                            <div class="swiper-slide swiper-slide-active" style="width: 250px; height: 1000px;">
                                 <div data-seller-product-id="1621209" data-title="Bốn Chàng Trai Cùng Nhau Đi Du Lịch" data-price="71400" data-id="1621207" data-score="" data-brand="Yuriko Mamiya" data-category="#" tpl="" rel="" class="product-item    ">
                                     <a data-id="1621207" data-score="" href="./chi-tiet.html" title="Bốn Chàng Trai Cùng Nhau Đi Du Lịch" class="">
 
@@ -489,6 +489,7 @@
 
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>
@@ -539,10 +540,8 @@
 
     <footer id="footer">
         <div>
-            <i class="icon-newsletter ins-email-icon tikicon"></i><div class="clearfix ins-news-text" style="">
+            <i class="icon-newsletter ins-email-icon tikicon"></i><div class="clearfix ins-news-text" style="margin-top: -100px;">
                 <hr class="line-bg-body">
-                
-
                 <address class="footer-address">
                     <div class="container">
                         <div class="address-office">
@@ -563,7 +562,6 @@
                                     <b>Địa chỉ gửi hàng đổi/trả/bảo hành:</b>
                                     Trung tâm xử lý đơn hàng Bookee - 371 Nguyễn Kiệm, phường 13, quận Gò Vấp, TP. Hồ Chí Minh
                                 </p>
-                                
                             </div>
                         </div>
                     </div>
