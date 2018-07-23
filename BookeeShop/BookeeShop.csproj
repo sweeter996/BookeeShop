@@ -176,8 +176,8 @@
     <Compile Include="Models\BookCategoriesModel.cs" />
     <Compile Include="Models\BookeeDb.cs" />
     <Compile Include="Models\BookInformationModel.cs" />
+    <Compile Include="Models\castBillInfor.cs" />
     <Compile Include="Models\castBookModel.cs" />
-    <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\CustomerModel.cs" />
     <Compile Include="Models\OrdersModel.cs" />
     <Compile Include="Models\StaticVariable.cs" />

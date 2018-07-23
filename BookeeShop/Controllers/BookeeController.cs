@@ -121,17 +121,21 @@ namespace BookeeShop.Controllers
         }
 
         [HttpPost]
-        public ActionResult InformationForBill(string hoten, string sdt, string diachi)
+        public ActionResult InformationForBill(castBillInfor paymentInfor)
         {
-            StaticVariable.Diachi = diachi;
-            StaticVariable.Hoten = hoten;
-            StaticVariable.SDT = sdt;
+            StaticVariable.HoTen = paymentInfor.HoTen;
+            StaticVariable.Phone = paymentInfor.Phone;
+            StaticVariable.City = paymentInfor.City;
+            StaticVariable.District = paymentInfor.District;
+            StaticVariable.State = paymentInfor.State;
+            StaticVariable.Address = paymentInfor.Address;
             return RedirectToAction("checkout");
         }
 
         [HttpGet]
         public ActionResult Checkout()
         {
+            //tim ra duoc cuon sach voi id = id static
             return View();
         }
     }

@@ -79,8 +79,15 @@
                                     <a href="./Thông tin khách hàng.html" class="btn btn-default btn-custom1">Sửa</a>
                                 </div>
                                 <div class="information">
-                                    <h6>sfsf wwe</h6>
-                                    <p class="end">qwww, Phường An Khê, Quận Thanh Khê, Đà Nẵng<br>T: 0927575751<br>Việt Nam</p>
+                                    @*<h6>@BookeeShop.Models.StaticVariable.Address</h6>*@
+                                    <p class="end">
+                                        Họ tên: @BookeeShop.Models.StaticVariable.HoTen <br>
+                                        Số điện thoại: @BookeeShop.Models.StaticVariable.Phone <br>
+                                        Địa chỉ: @BookeeShop.Models.StaticVariable.Address <br>
+                                        Phường: @BookeeShop.Models.StaticVariable.State <br>
+                                        Quận: @BookeeShop.Models.StaticVariable.District <br>
+                                        Thành phố: @BookeeShop.Models.StaticVariable.City
+                                    </p>
                                 </div>
                             </div>
                         </div>
