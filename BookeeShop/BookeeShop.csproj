@@ -268,11 +268,6 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Areas\Admin\Views\web.config" />
-    <Content Include="Areas\User\Views\web.config" />
-    <Content Include="Areas\Admin\Views\Register\Register.cshtml" />
-    <Content Include="Areas\Admin\Views\Login\Login.cshtml" />
-    <Content Include="Areas\Admin\Views\Register\Index.cshtml" />
     <Content Include="Content\scss\style.scss" />
     <Content Include="Content\css\1541902979357787" />
     <Content Include="Content\css\1626984400949421" />
@@ -310,6 +305,11 @@
     <Content Include="Content\css\generic" />
     <Content Include="Content\css\generic%281%29" />
     <Content Include="Content\css\v1" />
+    <Content Include="Areas\Admin\Views\Login\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\Register\Register.cshtml" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\User\Views\web.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
