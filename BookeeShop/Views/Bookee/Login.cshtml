@@ -24,7 +24,7 @@
             <div class="tab-content">
                 <div id="signup">
                     <h1>ĐĂNG KÝ!</h1>
-
+                    @ViewBag.message
                     <form method="post" action="@Url.Action("Register","Bookee")">
 
                         <div class="top-row">
@@ -60,13 +60,13 @@
 
                 <div id="login">
                     <h1>ĐĂNG NHẬP!</h1>
-
+                    @ViewBag.notification
                     <form action="@Url.Action("Login","Bookee")" method="post">
                         <div class="field-wrap">
                             <label style="color:black">
                                 Email<span class="req">*</span>
                             </label>
-                            @Html.TextBoxFor(model => model.LastName, new { placeholder = "*", autocomplete = "off", required = "required", @type = "email" })
+                            @Html.TextBoxFor(model => model.Email, new { placeholder = "*", autocomplete = "off", required = "required", @type = "email" })
                         </div>
 
                         <div class="field-wrap">

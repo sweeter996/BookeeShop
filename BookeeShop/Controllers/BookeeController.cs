@@ -25,7 +25,7 @@ namespace BookeeShop.Controllers
         [HttpGet]
         public ActionResult Login()
         {
-            ViewBag.message = null;
+
             ViewBag.notification = null;
             return View();
         }
@@ -62,7 +62,7 @@ namespace BookeeShop.Controllers
         {
             if(!ModelState.IsValid)
             {
-                return View();
+                return RedirectToAction("Login");
             }
             if (CustomerDAO.IsNullCutomer(user.Email))
             {
@@ -79,14 +79,23 @@ namespace BookeeShop.Controllers
                 user.Password = CustomerDAO.encryptPassword(user.Password);
                 Boolean result = CustomerDAO.InsertOnMock(user);
                 if (result)
+                {
                     ViewBag.message = "Đăng ký thành công";
+                    return RedirectToAction("Index");
+                }
+                    
                 else
                     ViewBag.message = "Đăng ký thất bại";
+                return RedirectToAction("Login");
             }
             else
+            {
                 ViewBag.message = "Email đã đăng ký";
-            ModelState.Clear();
-            return View();
+                ModelState.Clear();
+                return RedirectToAction("Register");
+            }
+                
+            
         }
 
         public ActionResult DetailBook(string bookID)
@@ -136,7 +145,8 @@ namespace BookeeShop.Controllers
         public ActionResult Checkout()
         {
             //tim ra duoc cuon sach voi id = id static
-            return View();
+            BookInformationModel orderBook = new BookeeDb().BookInformation.FirstOrDefault(book => book.BookID == StaticVariable.Book_ID);
+            return View(orderBook);
         }
     }
 }

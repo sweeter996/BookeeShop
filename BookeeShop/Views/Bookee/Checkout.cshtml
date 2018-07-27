@@ -1,4 +1,4 @@
-﻿
+﻿@model BookeeShop.Models.BookInformationModel
 @{
     Layout = null;
 }
@@ -103,32 +103,32 @@
                                     <div class="product">
                                         <div class="item">
                                             <p class="title">
-                                                <strong>1 x</strong><a href="https://tiki.vn/bon-chang-trai-cung-nhau-di-du-lich-p1621207.html?spid=1621209" target="_blank">Bốn Chàng Trai Cùng Nhau Đi Du Lịch</a>
+                                                <strong>1 x</strong><a href="https://tiki.vn/bon-chang-trai-cung-nhau-di-du-lich-p1621207.html?spid=1621209" target="_blank">@Model.BookName</a>
                                                 <span class="seller-by">
                                                     Cung cấp bởi <strong class="firm">Tiki Trading</strong>
                                                 </span>
                                             </p>
 
-                                            <p class="price text-right">
+                                            @*<p class="price text-right">
                                                 <span>71.400&nbsp;₫ </span>
                                                 <br>
                                                 <img srcset="https://vcdn.tikicdn.com/desktop/img/2h-circle.png 1x, https://vcdn.tikicdn.com/desktop/img/2h-circle@2x.png 2x" class="img2h" width="22" alt="Hỗ trợ giao hàng nhanh 2h tại TPHCM và HN" title="Hỗ trợ giao hàng nhanh 2h tại TPHCM và HN">
 
-                                            </p>
+                                            </p>*@
                                         </div>
                                     </div>
                                     <p class="list-info-price">
                                         <b>Tạm tính</b>
-                                        <span>71.400&nbsp;₫</span>
+                                        <span>@Model.BookPrice &nbsp;₫</span>
                                     </p>
-                                    <p class="list-info-price">
+                                    @*<p class="list-info-price">
                                         <b>Phí vận chuyển</b>
                                         <span>18.000&nbsp;₫</span>
-                                    </p>
+                                    </p>*@
 
                                     <p class="total2">
                                         Thành tiền:
-                                        <span>89.400&nbsp;₫ </span>
+                                        <span>@Model.BookPrice&nbsp;₫ </span>
                                     </p>
                                     <p class="text-right">
                                         <i>(Đã bao gồm VAT)</i>
