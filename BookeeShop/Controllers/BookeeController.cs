@@ -15,11 +15,12 @@ namespace BookeeShop.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            using (var db = new BookeeDb())
-            {
-                ICollection<BookCategoriesModel> categoryList = db.BookCategories.ToList();
-                return View(categoryList.ToList());
-            }
+            //using (var db = new BookeeDb())
+            //{
+            //    ICollection<BookCategoriesModel> categoryList = db.BookCategories.ToList();
+            //    return View(categoryList.ToList());
+            //}
+            return View();
         }
 
         [HttpGet]
@@ -46,6 +47,8 @@ namespace BookeeShop.Controllers
                 cast_RegisterCustomerModel getUserOnMock = CustomerDAO.GetUserOnMock(userId);
                 if (user.Password.Equals(getUserOnMock.Password))
                 {
+
+                    Session.Add("user", user.LastName + " " + user.FirstName);
                     return RedirectToAction("Index", "Bookee");
                 }
                 else
@@ -116,7 +119,8 @@ namespace BookeeShop.Controllers
                                BookID = book.BookID,
                                BookName = book.BookName,
                                BookCover = book.BookCoverImage,
-                               BookAuthor = book.Bookauthor
+                               BookAuthor = book.Bookauthor,
+                               BookPrice = book.BookPrice
                            };
                 return View(temp.ToList());
             }
@@ -147,6 +151,38 @@ namespace BookeeShop.Controllers
             //tim ra duoc cuon sach voi id = id static
             BookInformationModel orderBook = new BookeeDb().BookInformation.FirstOrDefault(book => book.BookID == StaticVariable.Book_ID);
             return View(orderBook);
+        }
+
+
+
+        [HttpGet]
+        public ActionResult getCategoryItem()
+        {
+            return View(new BookeeDb().BookCategories.ToList());
+        }
+
+        public ActionResult getBookPagination(int page = 1, int size = 3)
+        {
+            IEnumerable<castBookModel> listbook = CustomerDAO.pagingnationList(page, size);
+            return View(listbook);
+        }
+
+        [HttpPost]
+        public ActionResult searchBook(string searchKey)
+        {
+            IEnumerable<castBookModel> resultBook = new BookeeDb().BookInformation.
+                Where(book => book.BookName.Contains(searchKey)).
+                Select(item =>
+               new castBookModel
+               {
+                   BookID = item.BookID,
+                   BookName = item.BookName,
+                   BookCover = item.BookCoverImage,
+                   BookAuthor = item.Bookauthor,
+                   BookPrice = item.BookPrice
+               }
+                );
+                return View(resultBook.ToList());
         }
     }
 }

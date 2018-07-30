@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
+using PagedList;
 
 namespace BookeeShop.Areas.Admin.Data_Access
 {
@@ -67,6 +68,24 @@ namespace BookeeShop.Areas.Admin.Data_Access
                     user = readContent.Result;
                 }
                 return user;
+            }
+        }
+
+        public static IEnumerable<castBookModel> pagingnationList(int page, int size)
+        {
+            using (var db = new BookeeDb())
+            {
+                var list = from book in db.BookInformation
+                           orderby book.BookAddedDate descending
+                           select new castBookModel
+                           {
+                               BookID = book.BookID,
+                               BookName = book.BookName,
+                               BookAuthor = book.Bookauthor,
+                               BookCover = book.BookCoverImage,
+                               BookPrice = book.BookPrice
+                           };
+                return list.ToPagedList(page, size);
             }
         }
     }

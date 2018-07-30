@@ -11,5 +11,6 @@ namespace BookeeShop.Models
         public string BookName { get; set; }
         public string BookCover { get; set; }
         public string BookAuthor { get; set; }
+        public string BookPrice { get; set; }
     }
 }
