@@ -173,7 +173,9 @@
     <Compile Include="Areas\Admin\Models\cast_LoginCustomerModel.cs" />
     <Compile Include="Areas\Admin\Models\cast_RegisterCustomerModel.cs" />
     <Compile Include="Areas\User\UserAreaRegistration.cs" />
+    <Compile Include="Controllers\BookCategoriesModelsController.cs" />
     <Compile Include="Controllers\BookeeController.cs" />
+    <Compile Include="Controllers\BookInformationModelsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -350,6 +352,16 @@
     <Content Include="Views\Bookee\CategoryBook.cshtml" />
     <Content Include="Views\Bookee\InformationForBill.cshtml" />
     <Content Include="Views\Bookee\Checkout.cshtml" />
+    <Content Include="Views\BookCategoriesModels\Create.cshtml" />
+    <Content Include="Views\BookCategoriesModels\Delete.cshtml" />
+    <Content Include="Views\BookCategoriesModels\Details.cshtml" />
+    <Content Include="Views\BookCategoriesModels\Edit.cshtml" />
+    <Content Include="Views\BookCategoriesModels\Index.cshtml" />
+    <Content Include="Views\BookInformationModels\Create.cshtml" />
+    <Content Include="Views\BookInformationModels\Delete.cshtml" />
+    <Content Include="Views\BookInformationModels\Details.cshtml" />
+    <Content Include="Views\BookInformationModels\Edit.cshtml" />
+    <Content Include="Views\BookInformationModels\Index.cshtml" />
     <Content Include="Views\Bookee\getCategoryItem.cshtml" />
     <Content Include="Views\Bookee\getBookPagination.cshtml" />
     <Content Include="Views\Bookee\searchBook.cshtml" />
