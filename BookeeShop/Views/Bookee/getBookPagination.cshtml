@@ -1,0 +1,35 @@
+﻿@model PagedList.IPagedList<BookeeShop.Models.castBookModel>
+@using PagedList.Mvc;
+@{
+    Layout = null;
+}
+@using (Html.BeginForm("Index", "Bookee", FormMethod.Get))
+{
+    foreach (var item in Model)
+    {
+        <div class="product-box-list abcd">
+            <div data-seller-product-id="1621209" data-title="@item.BookName" data-price="71400" data-id="1621207" data-score="" data-brand="@item.BookAuthor" data-category="#" tpl="" rel="" class="product-item    ">
+                <a data-id="1621207" data-score="" href="@Url.Action("DetailBook","Bookee",new { bookID = item.BookID })" title="@item.BookName" class="">
+                    <span class="image">
+                        <img class="product-image img-responsive" src="~/Content/css/31faa41dfe6feae3b7303bbb1e36db27.jpg" alt="">
+                        <!--Tên-gía-tên tác giả-->
+                        <span class="product-right-icon">
+                            <i class="tikicon icon-2h"></i>
+                        </span>
+                    </span>
+                    <span class="title">
+                        @item.BookName
+                    </span>
+                    <p class="author">@item.BookAuthor</p>
+
+                    <p class="price-sale">
+                        <span class="final-price">@item.BookPrice &nbsp;₫</span>
+                        @*<span class="price-regular">119.000&nbsp;₫</span>
+                            <span class="sale-tag sale-tag-square">-40%</span>*@
+            </div>
+        </div>
+    }
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page }))
+}
+
+

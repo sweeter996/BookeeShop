@@ -1,0 +1,14 @@
+﻿@model IEnumerable<BookeeShop.Models.BookCategoriesModel>
+@{
+    Layout = null;
+}
+<div id="collapse-category" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-category">
+    <div class="list-group">
+        <div class="list-group-item is-top">
+            @foreach (var item in Model)
+            {
+                @Html.ActionLink(item.CategoryName, "CategoryBook", "Bookee", new { category = item.CategoryID }, null);
+            }
+        </div>
+    </div>
+</div>
