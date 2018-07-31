@@ -1,4 +1,4 @@
-﻿
+﻿@model BookeeShop.Models.BookInformationModel
 @{
     Layout = null;
 }
@@ -79,8 +79,15 @@
                                     <a href="./Thông tin khách hàng.html" class="btn btn-default btn-custom1">Sửa</a>
                                 </div>
                                 <div class="information">
-                                    <h6>sfsf wwe</h6>
-                                    <p class="end">qwww, Phường An Khê, Quận Thanh Khê, Đà Nẵng<br>T: 0927575751<br>Việt Nam</p>
+                                    @*<h6>@BookeeShop.Models.StaticVariable.Address</h6>*@
+                                    <p class="end">
+                                        Họ tên: @BookeeShop.Models.StaticVariable.HoTen <br>
+                                        Số điện thoại: @BookeeShop.Models.StaticVariable.Phone <br>
+                                        Địa chỉ: @BookeeShop.Models.StaticVariable.Address <br>
+                                        Phường: @BookeeShop.Models.StaticVariable.State <br>
+                                        Quận: @BookeeShop.Models.StaticVariable.District <br>
+                                        Thành phố: @BookeeShop.Models.StaticVariable.City
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -96,32 +103,32 @@
                                     <div class="product">
                                         <div class="item">
                                             <p class="title">
-                                                <strong>1 x</strong><a href="https://tiki.vn/bon-chang-trai-cung-nhau-di-du-lich-p1621207.html?spid=1621209" target="_blank">Bốn Chàng Trai Cùng Nhau Đi Du Lịch</a>
+                                                <strong>1 x</strong><a href="https://tiki.vn/bon-chang-trai-cung-nhau-di-du-lich-p1621207.html?spid=1621209" target="_blank">@Model.BookName</a>
                                                 <span class="seller-by">
                                                     Cung cấp bởi <strong class="firm">Tiki Trading</strong>
                                                 </span>
                                             </p>
 
-                                            <p class="price text-right">
-                                                <span>71.400&nbsp;₫ </span>
-                                                <br>
-                                                <img srcset="https://vcdn.tikicdn.com/desktop/img/2h-circle.png 1x, https://vcdn.tikicdn.com/desktop/img/2h-circle@2x.png 2x" class="img2h" width="22" alt="Hỗ trợ giao hàng nhanh 2h tại TPHCM và HN" title="Hỗ trợ giao hàng nhanh 2h tại TPHCM và HN">
+                                            @*<p class="price text-right">
+                                                    <span>71.400&nbsp;₫ </span>
+                                                    <br>
+                                                    <img srcset="https://vcdn.tikicdn.com/desktop/img/2h-circle.png 1x, https://vcdn.tikicdn.com/desktop/img/2h-circle@2x.png 2x" class="img2h" width="22" alt="Hỗ trợ giao hàng nhanh 2h tại TPHCM và HN" title="Hỗ trợ giao hàng nhanh 2h tại TPHCM và HN">
 
-                                            </p>
+                                                </p>*@
                                         </div>
                                     </div>
                                     <p class="list-info-price">
                                         <b>Tạm tính</b>
-                                        <span>71.400&nbsp;₫</span>
+                                        <span>@Model.BookPrice &nbsp;₫</span>
                                     </p>
-                                    <p class="list-info-price">
-                                        <b>Phí vận chuyển</b>
-                                        <span>18.000&nbsp;₫</span>
-                                    </p>
+                                    @*<p class="list-info-price">
+                                            <b>Phí vận chuyển</b>
+                                            <span>18.000&nbsp;₫</span>
+                                        </p>*@
 
                                     <p class="total2">
                                         Thành tiền:
-                                        <span>89.400&nbsp;₫ </span>
+                                        <span>@Model.BookPrice&nbsp;₫ </span>
                                     </p>
                                     <p class="text-right">
                                         <i>(Đã bao gồm VAT)</i>
@@ -134,9 +141,11 @@
 
                     <div class="form-group row end">
                         <div class="col-lg-6" style="margin-left: 610px;">
-                            <button type="button" id="btn-placeorder" class="btn btn-block btn-default btn-checkout">ĐẶT MUA</button>
+                            <button type="submit" id="btn-placeorder" class="btn btn-block btn-default btn-checkout" >@Html.ActionLink("ĐẶT MUA","Order", "Bookee", null) 
+                            </button>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

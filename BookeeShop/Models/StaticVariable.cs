@@ -8,8 +8,11 @@ namespace BookeeShop.Models
     public static class StaticVariable
     {
         public static string Book_ID { get; set; }
-        public static string Hoten { get; set; }
-        public static string Diachi { get; set; }
-        public static string SDT { get; set; }
+        public static string HoTen { get; set; }
+        public static string Phone { get; set; }
+        public static string City { get; set; }
+        public static string District { get; set; }
+        public static string State { get; set; }
+        public static string Address { get; set; }
     }
 }

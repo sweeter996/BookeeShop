@@ -5,12 +5,10 @@ using System.Web;
 
 namespace BookeeShop.Models
 {
-    public class castBookModel
+    public class OrderBook
     {
         public string BookID { get; set; }
         public string BookName { get; set; }
-        public string BookCover { get; set; }
-        public string BookAuthor { get; set; }
         public string BookPrice { get; set; }
     }
 }

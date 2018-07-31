@@ -13,8 +13,8 @@ namespace BookeeShop.Models
         public string OrderID { get; set; }
         public DateTime OrderDate { get; set; }
         public string OrderStatus { get; set; }
-        public double TotalPrice { get; set; }
+        public string TotalPrice { get; set; }
         public virtual CustomerModel CustomerID { get; set; }
-        public ICollection<BookInformationModel> ListBook{ get; set; }
+        public virtual BookInformationModel BookID { get; set; }
     }
 }

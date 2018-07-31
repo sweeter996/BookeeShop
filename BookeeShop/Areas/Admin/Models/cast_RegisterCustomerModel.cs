@@ -16,7 +16,7 @@ namespace BookeeShop.Areas.Admin.Models
         [MaxLength(30)]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage = "Address is not empty")]
+        
         public string Address { get; set; }
 
         [EmailAddress]
