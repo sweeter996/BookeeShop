@@ -110,11 +110,11 @@
                                             </p>
 
                                             @*<p class="price text-right">
-                                                <span>71.400&nbsp;₫ </span>
-                                                <br>
-                                                <img srcset="https://vcdn.tikicdn.com/desktop/img/2h-circle.png 1x, https://vcdn.tikicdn.com/desktop/img/2h-circle@2x.png 2x" class="img2h" width="22" alt="Hỗ trợ giao hàng nhanh 2h tại TPHCM và HN" title="Hỗ trợ giao hàng nhanh 2h tại TPHCM và HN">
+                                                    <span>71.400&nbsp;₫ </span>
+                                                    <br>
+                                                    <img srcset="https://vcdn.tikicdn.com/desktop/img/2h-circle.png 1x, https://vcdn.tikicdn.com/desktop/img/2h-circle@2x.png 2x" class="img2h" width="22" alt="Hỗ trợ giao hàng nhanh 2h tại TPHCM và HN" title="Hỗ trợ giao hàng nhanh 2h tại TPHCM và HN">
 
-                                            </p>*@
+                                                </p>*@
                                         </div>
                                     </div>
                                     <p class="list-info-price">
@@ -122,9 +122,9 @@
                                         <span>@Model.BookPrice &nbsp;₫</span>
                                     </p>
                                     @*<p class="list-info-price">
-                                        <b>Phí vận chuyển</b>
-                                        <span>18.000&nbsp;₫</span>
-                                    </p>*@
+                                            <b>Phí vận chuyển</b>
+                                            <span>18.000&nbsp;₫</span>
+                                        </p>*@
 
                                     <p class="total2">
                                         Thành tiền:
@@ -141,9 +141,11 @@
 
                     <div class="form-group row end">
                         <div class="col-lg-6" style="margin-left: 610px;">
-                            <button type="button" id="btn-placeorder" class="btn btn-block btn-default btn-checkout">ĐẶT MUA</button>
+                            <button type="submit" id="btn-placeorder" class="btn btn-block btn-default btn-checkout" >@Html.ActionLink("ĐẶT MUA","Order", "Bookee", null) 
+                            </button>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>

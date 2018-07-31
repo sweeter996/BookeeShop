@@ -47,8 +47,8 @@ namespace BookeeShop.Controllers
                 cast_RegisterCustomerModel getUserOnMock = CustomerDAO.GetUserOnMock(userId);
                 if (user.Password.Equals(getUserOnMock.Password))
                 {
-
-                    Session.Add("user", user.LastName + " " + user.FirstName);
+                    Session["ID"] = userId;
+                    Session["user"]= getUserOnMock.LastName + " " + getUserOnMock.FirstName;
                     return RedirectToAction("Index", "Bookee");
                 }
                 else
@@ -130,7 +130,18 @@ namespace BookeeShop.Controllers
         public ActionResult InformationForBill(string id)
         {
             StaticVariable.Book_ID = id;
-            return View();
+            if(Session["ID"]!= null)
+            {
+                cast_RegisterCustomerModel getUserOnMock = CustomerDAO.GetUserOnMock(Convert.ToInt32(Session["ID"].ToString()));
+                castBillInfor user = new castBillInfor();
+                user.HoTen = getUserOnMock.LastName + " " + getUserOnMock.FirstName;
+                return View(user);
+            }
+            else
+            {
+                return View();
+            }
+            
         }
 
         [HttpPost]
@@ -148,12 +159,29 @@ namespace BookeeShop.Controllers
         [HttpGet]
         public ActionResult Checkout()
         {
-            //tim ra duoc cuon sach voi id = id static
+
             BookInformationModel orderBook = new BookeeDb().BookInformation.FirstOrDefault(book => book.BookID == StaticVariable.Book_ID);
             return View(orderBook);
         }
 
-
+        
+        public ActionResult Order()
+        {
+            using (var db = new BookeeDb())
+            {
+                int userID = Convert.ToInt32(Session["ID"].ToString());
+                OrdersModel order = new OrdersModel();
+                order.OrderID = Guid.NewGuid().ToString();
+                order.OrderDate = DateTime.Now;
+                order.OrderStatus = "process";
+                order.CustomerID = db.Customers.FirstOrDefault(user => user.CustomerID == userID);
+                order.BookID = db.BookInformation.FirstOrDefault(book => book.BookID == StaticVariable.Book_ID);
+                order.TotalPrice = db.BookInformation.FirstOrDefault(book => book.BookID == StaticVariable.Book_ID).BookPrice;
+                db.Orders.Add(entity: order);
+                db.SaveChanges();
+            }
+            return RedirectToAction("Index","Bookee");
+        }
 
         [HttpGet]
         public ActionResult getCategoryItem()
