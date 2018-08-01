@@ -1,0 +1,94 @@
+﻿@model IEnumerable<BookeeShop.Models.BookInformationModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BookName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookIntroduction)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookCoverImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bookauthor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookPublisher)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YearReleased)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookForm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookLanguage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookAddedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BookModifiedDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookIntroduction)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookCoverImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bookauthor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookPublisher)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YearReleased)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookForm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookLanguage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookAddedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BookModifiedDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BookID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BookID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BookID })
+        </td>
+    </tr>
+}
+
+</table>
